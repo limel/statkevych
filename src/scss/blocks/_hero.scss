@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+
+  &.container {
+    padding: 72px 64px 123px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  & .caption {
+    max-width: 200px;
+    width: 100%;
+    margin-right: 24px;
+    margin-top: 36px;
+  }
+
+  & .img {
+    position: absolute;
+    max-width: 500px;
+    width: 100%;
+
+  }
+}
+
+.hero-text {
+  h1 {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -1.6px;
+    max-width: 755px;
+    margin-bottom: 48px;
+    margin-top: 0;
+
+  }
+
+  p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7;
+    max-width: 530px;
+    margin-bottom: 48px;
+  }
+}

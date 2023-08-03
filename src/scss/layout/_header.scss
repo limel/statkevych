@@ -1,10 +1,11 @@
 .header {
   position: sticky;
+  z-index: 2;
   top: 0;
   left: 0;
-  background-color: #EDECEE;
   padding: 1rem 0 1.5rem 0;
-  border-bottom: 1px solid #DADCE2;
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
 
   &__container {
     display: flex;
@@ -29,14 +30,30 @@
 .navigation-list {
   gap: 0 64px;
 
-  &__item {}
-
   &__link {
-    text-decoration: none;
+    position: relative;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5;
     color: #1e1e1e;
+    padding-bottom: 8px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background-color: $accent-color;
+      width: 0;
+      transition: $transition width;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:after {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -63,13 +80,22 @@
 
   &__link {
     text-decoration: none;
-    color: #1e1e1e;
-
-
+    color: $text-color;
 
     svg {
       width: 20px;
       height: 20px;
+      color: $text-color;
+      transform: scale(1);
+      transition: $transition color, $transition transform;
     }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover svg {
+        color: $accent-color;
+        transform: scale(1.2);
+      }
+    }
+
   }
 }
