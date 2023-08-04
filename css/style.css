@@ -446,8 +446,8 @@ menu {
   color: #1e1e1e;
   position: relative;
   overflow: hidden;
-  -webkit-transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color, 0.3s ease-in-out padding, 0.3s ease-in-out border-color, 0.3s ease-in-out font-size, 0.3s ease-in-out box-shadow;
-  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color, 0.3s ease-in-out padding, 0.3s ease-in-out border-color, 0.3s ease-in-out font-size, 0.3s ease-in-out box-shadow;
+  -webkit-transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color, 0.3s ease-in-out padding, 0.3s ease-in-out border-color, 0.3s ease-in-out font-size, 0.3s ease-in-out filter;
+  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color, 0.3s ease-in-out padding, 0.3s ease-in-out border-color, 0.3s ease-in-out font-size, 0.3s ease-in-out filter;
 }
 
 .btn-primary .ripple,
@@ -484,8 +484,6 @@ menu {
   color: #FFF;
   border-color: transparent;
   outline: none;
-  -webkit-box-shadow: 0 0 10px 5px rgba(227, 197, 128, 0.5);
-          box-shadow: 0 0 10px 5px rgba(227, 197, 128, 0.5);
 }
 
 .btn-accent {
@@ -664,8 +662,8 @@ menu {
 
 .header.fixed {
   padding: 0.5rem;
-  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
+          box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
 }
 
 .header.fixed .navigation-list__link {
@@ -772,11 +770,11 @@ menu {
 @media (hover: hover) and (pointer: fine) {
   .btn-primary:hover:not(.actions__link),
   .btn-accent:hover:not(.actions__link) {
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
     background-color: #CDB06D;
     color: #FFF;
     border-color: transparent;
-    -webkit-box-shadow: 0 0 10px 5px rgba(227, 197, 128, 0.5);
-            box-shadow: 0 0 10px 5px rgba(227, 197, 128, 0.5);
   }
 
   .btn-icon:hover:not(.actions__link) .icon svg {
