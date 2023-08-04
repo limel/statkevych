@@ -91,20 +91,17 @@
 
     &:last-child {
       margin-right: 0;
-
-      & .btn-primary {
-        padding: 16px 24px
-      }
     }
   }
 
   &__link {
+    @extend .btn-primary;
     text-decoration: none;
     color: $text-color;
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 1.25rem;
+      height: 1.25rem;
       color: $text-color;
       transform: scale(1);
       transition:
@@ -113,7 +110,6 @@
         $transition width,
         $transition height;
     }
-
 
     &:focus {
       outline: none;
@@ -130,7 +126,11 @@
         transform: scale(1.2);
       }
     }
+  }
 
+  &__button {
+    @extend.btn-primary;
+    padding: 15px 24px;
   }
 }
 
@@ -144,22 +144,18 @@
     }
   }
 
-  .actions__item {
-    .btn-primary {
-      padding: 8px;
+  .actions__link {
+    padding: 11px;
+  }
 
-      svg {
-        width: 0.875rem;
-        height: 0.875rem;
-      }
-    }
+  .actions__link svg {
+    width: 1rem;
+    height: 1rem
+  }
 
-    &:last-child {
-      & .btn-primary {
-        padding: 8px 24px;
-        font-size: 0.875rem;
-      }
-    }
+  .actions__button {
+    padding: 11px 24px;
+    font-size: 0.875rem;
   }
 
   .logo {

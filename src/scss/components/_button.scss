@@ -38,19 +38,16 @@
 
   &:focus:not(.actions__link) {
     background-color: $accent-color;
-    color: #FFF;
+    color: #fff;
     border-color: transparent;
     outline: none;
-    // box-shadow: 0 0 10px 5px $accent-shadow-color;
   }
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover:not(.actions__link) {
-      filter: brightness(1.1);
+    &:hover:not(.actions__link, .btn-accent) {
       background-color: $accent-color;
-      color: #FFF;
+      color: #fff;
       border-color: transparent;
-      // box-shadow: 0 0 10px 5px $accent-shadow-color;
     }
   }
 }
@@ -62,6 +59,12 @@
   letter-spacing: -0.16px;
   background-color: $accent-color;
   border: none;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not(.actions__link) {
+      filter: brightness(1.1);
+    }
+  }
 }
 
 
@@ -92,7 +95,7 @@
     &:hover:not(.actions__link) {
       & .icon {
         svg {
-          transform: translateX(3px);
+          transform: rotate(-45deg);
         }
       }
     }

@@ -1,5 +1,19 @@
 <section class="services-carousel">
 	<div class="container">
 		<span class="caption">Послуги</span>
+		<div class="swiper">
+			<ul class="swiper-wrapper">
+				<!-- @@loop("../cards/services-carousel-card.html", "./services.json") -->
+				@@include("../cards/services-carousel-card.html", {
+				"title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"images1.jpg" }) @@include("../cards/services-carousel-card.html",
+				{ "title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"images1.jpg" }) @@include("../cards/services-carousel-card.html",
+				{ "title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"images1.jpg" }) @@include("../cards/services-carousel-card.html",
+				{ "title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"images1.jpg" })
+			</ul>
+		</div>
 	</div>
 </section>

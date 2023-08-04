@@ -42,5 +42,8 @@
 		"webpack": "latest",
 		"webpack-stream": "latest"
 	},
-	"homepage": "https://github.com/limel/statkevych"
+	"homepage": "https://github.com/limel/statkevych",
+	"dependencies": {
+		"swiper": "^10.1.0"
+	}
 }
