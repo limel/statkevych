@@ -19,7 +19,7 @@
     $transition padding,
     $transition border-color,
     $transition font-size,
-    $transition box-shadow;
+    $transition filter;
 
   .ripple {
     position: absolute;
@@ -41,15 +41,16 @@
     color: #FFF;
     border-color: transparent;
     outline: none;
-    box-shadow: 0 0 10px 5px $accent-shadow-color;
+    // box-shadow: 0 0 10px 5px $accent-shadow-color;
   }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover:not(.actions__link) {
+      filter: brightness(1.1);
       background-color: $accent-color;
       color: #FFF;
       border-color: transparent;
-      box-shadow: 0 0 10px 5px $accent-shadow-color;
+      // box-shadow: 0 0 10px 5px $accent-shadow-color;
     }
   }
 }
