@@ -1,11 +1,16 @@
 .header {
-  position: sticky;
   z-index: 2;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   padding: 1rem 0 1.5rem 0;
   background-color: $background-color;
   border-bottom: 1px solid $border-color;
+  transition:
+    $transition box-shadow,
+    $transition padding,
+    $transition transform;
 
   &__container {
     display: flex;
@@ -16,7 +21,9 @@
   .logo {
     margin-right: 95px;
     min-width: 128px;
-
+    transition:
+      $transition min-width,
+      $transition height;
   }
 }
 
@@ -37,6 +44,7 @@
     line-height: 1.5;
     color: #1e1e1e;
     padding-bottom: 8px;
+    transition: $transition font-size;
 
     &:after {
       content: '';
@@ -47,6 +55,14 @@
       background-color: $accent-color;
       width: 0;
       transition: $transition width;
+    }
+
+    &:focus {
+      outline: none;
+
+      &:after {
+        width: 100%;
+      }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -73,8 +89,12 @@
       margin-right: 24px;
     }
 
-    &:last-child .btn-primary {
-      padding: 16px 24px
+    &:last-child {
+      margin-right: 0;
+
+      & .btn-primary {
+        padding: 16px 24px
+      }
     }
   }
 
@@ -87,7 +107,21 @@
       height: 20px;
       color: $text-color;
       transform: scale(1);
-      transition: $transition color, $transition transform;
+      transition:
+        $transition color,
+        $transition transform,
+        $transition width,
+        $transition height;
+    }
+
+
+    &:focus {
+      outline: none;
+
+      svg {
+        color: $accent-color;
+        transform: scale(1.2);
+      }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -98,4 +132,41 @@
     }
 
   }
+}
+
+.header.fixed {
+  padding: 0.5rem;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+
+  .navigation-list {
+    &__link {
+      font-size: 0.875rem;
+    }
+  }
+
+  .actions__item {
+    .btn-primary {
+      padding: 8px;
+
+      svg {
+        width: 0.875rem;
+        height: 0.875rem;
+      }
+    }
+
+    &:last-child {
+      & .btn-primary {
+        padding: 8px 24px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .logo {
+    min-width: 64px;
+  }
+}
+
+.header.hide {
+  transform: translateY(-100%);
 }

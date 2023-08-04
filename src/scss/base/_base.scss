@@ -21,6 +21,10 @@ body {
   background-color: $background-color;
 }
 
+main {
+  padding-top: 104px;
+}
+
 .clearfix::after {
   content: '';
   display: table;
@@ -50,14 +54,15 @@ button {
   color: inherit;
 }
 
-ul {
+ul,
+menu {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .caption {
-  color: $text-color;
+  color: inherit;
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;

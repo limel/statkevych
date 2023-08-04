@@ -3,7 +3,10 @@
 	@@include('./include/layout/head.html',{ "title":"main-page" })
 	<body>
 		@@include('./include/layout/header.html')
-		<main>@@include('./include/hero/hero.html')</main>
+		<main>
+			@@include('./include/blocks/hero.html')
+			@@include('./include/blocks/services-carousel.html')
+		</main>
 		@@include('./include/layout/footer.html')
 	</body>
 </html>

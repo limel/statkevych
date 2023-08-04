@@ -1,5 +1,16 @@
 import * as baseFunctions from './modules/functions.js';
 
-baseFunctions.isWebp();
+document.addEventListener('DOMContentLoaded', () => {
+	// Custom JS
+	baseFunctions.isWebp();
+	baseFunctions.fixedHeader();
 
-console.log('hi');
+	window.addEventListener('scroll', baseFunctions.fixedHeader);
+
+	const buttons = document.getElementsByTagName('button');
+	for (const button of buttons) {
+		button.addEventListener('click', event =>
+			baseFunctions.createRipple(event)
+		);
+	}
+});

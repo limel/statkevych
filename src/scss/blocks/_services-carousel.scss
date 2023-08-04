@@ -1,0 +1,19 @@
+.services-carousel {
+  position: relative;
+  padding: 2rem 0;
+  color: #fff;
+  z-index: 1;
+  min-height: 374px;
+
+  &::after {
+    content: '';
+    width: 93.20%;
+    height: 100%;
+    background-color: $background-color-dark;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+}
