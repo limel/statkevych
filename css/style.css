@@ -1558,6 +1558,7 @@ menu {
 .actions__link {
   text-decoration: none;
   color: #1C253A;
+  padding: 13px;
 }
 
 .actions__link svg {
