@@ -4,6 +4,20 @@
   color: #fff;
   z-index: 1;
   min-height: 374px;
+  margin-bottom: 8.5rem;
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  & .caption {
+    min-width: 200px;
+    max-width: 200px;
+    margin-right: 1.5rem;
+  }
 
   &::after {
     content: '';
@@ -15,5 +29,17 @@
     top: 0;
     left: 0;
     display: block;
+  }
+
+  &__swiper {
+    max-width: 978px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  & .carousel-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
   }
 }

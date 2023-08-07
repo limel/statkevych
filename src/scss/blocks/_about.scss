@@ -1,0 +1,40 @@
+.about {
+  margin-bottom: 5.5rem;
+
+  .text.right {
+    margin-left: auto;
+
+    .h3 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .text.right,
+  .sticky {
+    max-width: 533px;
+  }
+
+  .section-title {
+    max-width: 755px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .sticky {
+    position: sticky;
+    top: 90px;
+
+    p {
+      margin-bottom: 3rem;
+    }
+  }
+}

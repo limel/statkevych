@@ -43,7 +43,7 @@ img {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 64px
+  padding: 0 4rem;
 }
 
 a,
@@ -61,6 +61,13 @@ menu {
   list-style: none;
 }
 
+p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.64;
+}
+
 .caption {
   color: inherit;
   font-family: Montserrat;
@@ -69,4 +76,28 @@ menu {
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.32px;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1.12px;
+}
+
+.h3 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.64px;
+}
+
+.card-title {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.96px;
 }

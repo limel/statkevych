@@ -1,0 +1,16 @@
+.services {
+  margin-bottom: 7.875rem;
+
+  .caption {
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    border-top: 1px solid $border-color;
+    gap: 3rem;
+  }
+}

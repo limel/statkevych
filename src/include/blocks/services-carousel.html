@@ -1,18 +1,47 @@
 <section class="services-carousel">
 	<div class="container">
 		<span class="caption">Послуги</span>
-		<div class="swiper">
+		<div role="group" class="carousel-navigation">
+			<button role="butto" class="carousel-navigation__button prev-button">
+				<svg
+					width="13"
+					height="14"
+					viewBox="0 0 13 14"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="carousel-navigation__icon"
+				>
+					<path d="M13 7L1 7M1 7L7 13M1 7L7 1" stroke="currentColor" />
+				</svg>
+			</button>
+			<button role="button" class="carousel-navigation__button next-button">
+				<svg
+					width="13"
+					height="14"
+					viewBox="0 0 13 14"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="carousel-navigation__icon"
+				>
+					<path d="M0 7H12M12 7L6 1M12 7L6 13" stroke="currentColor" />
+				</svg>
+			</button>
+		</div>
+		<div class="swiper services-carousel__swiper">
 			<ul class="swiper-wrapper">
 				<!-- @@loop("../cards/services-carousel-card.html", "./services.json") -->
 				@@include("../cards/services-carousel-card.html", {
 				"title":"Консультації ортопедичного та травматологічного профілю",
-				"img":"images1.jpg" }) @@include("../cards/services-carousel-card.html",
-				{ "title":"Консультації ортопедичного та травматологічного профілю",
-				"img":"images1.jpg" }) @@include("../cards/services-carousel-card.html",
-				{ "title":"Консультації ортопедичного та травматологічного профілю",
-				"img":"images1.jpg" }) @@include("../cards/services-carousel-card.html",
-				{ "title":"Консультації ортопедичного та травматологічного профілю",
-				"img":"images1.jpg" })
+				"img":"services/image1.jpg" })
+				@@include("../cards/services-carousel-card.html", {
+				"title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"services/image1.jpg" })
+				@@include("../cards/services-carousel-card.html", {
+				"title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"services/image1.jpg" })
+				@@include("../cards/services-carousel-card.html", {
+				"title":"Консультації ортопедичного та травматологічного профілю",
+				"img":"services/image1.jpg" })
 			</ul>
 		</div>
 	</div>
