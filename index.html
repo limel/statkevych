@@ -7,8 +7,8 @@
 	<title>main-page</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230809211320" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20230809211320" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230810000223" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230810000223" />
 </head>
 
 	<body>
@@ -96,7 +96,7 @@
 				</svg>
 			</button>
 		</div>
-		<div class="swiper services-carousel__swiper">
+		<div class="swiper services-carousel-swiper services-carousel__swiper">
 			<ul class="swiper-wrapper">
 				<!-- @@loop("../cards/services-carousel-card.html", "./services.json") -->
 				<li class="swiper-slide services-carousel-card">
@@ -297,13 +297,112 @@
 				</span>
 			</button>
 		</div>
-		<div class="image-grid"></div>
+		<div class="image-grid">
+			<div class="image-grid__columns">
+				<picture><source srcset="img/department/image1.webp" type="image/webp"><img src="img/department/image1.jpg" alt="img" /></picture>
+				<picture><source srcset="img/department/image2.webp" type="image/webp"><img src="img/department/image2.jpg" alt="img" /></picture>
+			</div>
+			<div class="image-grid__columns">
+				<picture><source srcset="img/department/image3.webp" type="image/webp"><img src="img/department/image3.jpg" alt="img" /></picture>
+				<picture><source srcset="img/department/image4.webp" type="image/webp"><img src="img/department/image4.jpg" alt="img" /></picture>
+				<picture><source srcset="img/department/image5.webp" type="image/webp"><img src="img/department/image5.jpg" alt="img" /></picture>
+			</div>
+			<div class="image-grid__columns">
+				<picture><source srcset="img/department/image6.webp" type="image/webp"><img src="img/department/image6.jpg" alt="img" /></picture>
+				<picture><source srcset="img/department/image7.webp" type="image/webp"><img src="img/department/image7.jpg" alt="img" /></picture>
+			</div>
+		</div>
+	</div>
+</section>
+
+			<section class="reviews">
+	<div class="container">
+		<span class="caption">Відгуки пацієнтів</span>
+		<div class="reviews__head">
+			<h2 class="section-title">Що говорять мої пацієнти.</h2>
+			<div class="navigation">
+				<button class="reviews-prev-button">prev</button>
+				<button class="reviews-next-button">next</button>
+			</div>
+		</div>
+	</div>
+	<div class="swiper reviews-swiper reviews__swiper">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide reviews-card">
+	<div class="reviews-card__top text">
+		<img src="" alt="" class="reviews-card__avatar" />
+		<p>
+			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+		</p>
+	</div>
+	<div class="reviews-card__bottom">
+		<span class="reviews-swiper-counter">1/4</span>
+		<div class="reviews-card__info">
+			<span>Юлія Супрун</span>
+			<span>56 років</span>
+		</div>
+	</div>
+</li>
+
+			<li class="swiper-slide reviews-card">
+	<div class="reviews-card__top text">
+		<img src="" alt="" class="reviews-card__avatar" />
+		<p>
+			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+		</p>
+	</div>
+	<div class="reviews-card__bottom">
+		<span class="reviews-swiper-counter">1/4</span>
+		<div class="reviews-card__info">
+			<span>Юлія Супрун</span>
+			<span>56 років</span>
+		</div>
+	</div>
+</li>
+
+			<li class="swiper-slide reviews-card">
+	<div class="reviews-card__top text">
+		<img src="" alt="" class="reviews-card__avatar" />
+		<p>
+			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+		</p>
+	</div>
+	<div class="reviews-card__bottom">
+		<span class="reviews-swiper-counter">1/4</span>
+		<div class="reviews-card__info">
+			<span>Юлія Супрун</span>
+			<span>56 років</span>
+		</div>
+	</div>
+</li>
+
+			<li class="swiper-slide reviews-card">
+	<div class="reviews-card__top text">
+		<img src="" alt="" class="reviews-card__avatar" />
+		<p>
+			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+		</p>
+	</div>
+	<div class="reviews-card__bottom">
+		<span class="reviews-swiper-counter">1/4</span>
+		<div class="reviews-card__info">
+			<span>Юлія Супрун</span>
+			<span>56 років</span>
+		</div>
+	</div>
+</li>
+
+		</ul>
 	</div>
 </section>
 
 		</main>
 		<footer>
-	<script src="js/app.min.js?_v=20230809211320"></script>
+	<script src="js/app.min.js?_v=20230810000223"></script>
 </footer>
 	</body>
 </html>
