@@ -1,0 +1,39 @@
+.department {
+  padding: 7.5rem 0 12.125rem 0;
+  background-color: $background-color-dark;
+  margin-bottom: 7.5rem;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .caption {
+    color: #fff;
+  }
+
+  .section-title {
+    color: $title-color-light;
+
+  }
+
+  .section-title__icon {
+    display: inline-flex;
+    position: relative;
+    top: 1rem;
+  }
+
+  .content {
+    width: 49.4%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: $text-color-light;
+
+    button {
+      margin-top: 3rem;
+    }
+  }
+}

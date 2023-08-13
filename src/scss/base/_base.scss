@@ -19,6 +19,7 @@ body {
     'Open Sans',
     'Helvetica Neue', sans-serif;
   background-color: $background-color;
+  color: $text-color;
 }
 
 main {
@@ -100,4 +101,20 @@ p {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.96px;
+}
+
+.text {
+  p {
+    color: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    margin-top: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }

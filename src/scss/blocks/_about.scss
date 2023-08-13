@@ -19,22 +19,26 @@
   }
 
   .section-title {
-    max-width: 755px;
+    max-width: 725px;
     margin-bottom: 2.5rem;
   }
-}
 
-.content {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
+  .image {
+    margin-top: 9.25rem;
+  }
 
-  .sticky {
-    position: sticky;
-    top: 90px;
+  .content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 
-    p {
-      margin-bottom: 3rem;
+    .sticky {
+      position: sticky;
+      top: 90px;
+
+      p {
+        margin-bottom: 3rem;
+      }
     }
   }
 }

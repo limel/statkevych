@@ -34,6 +34,7 @@ export function createRipple(event) {
 	button.appendChild(ripple);
 	button.blur();
 }
+
 let prevScroll = 0;
 
 export function fixedHeader() {
@@ -50,4 +51,33 @@ export function fixedHeader() {
 		: header.classList.add('hide');
 
 	prevScroll = currentScrollPosition;
+}
+
+export function handlerButtonClick() {
+	const buttons = document.querySelectorAll(
+		'button:not(.carousel-navigation__button)'
+	);
+
+	for (const button of buttons) {
+		button.addEventListener('click', event => createRipple(event));
+	}
+}
+
+export function updateNavigationButtons(swiper, prevButton, nextButton) {
+	if (swiper.isBeginning) {
+		prevButton.disabled = true;
+	} else {
+		prevButton.disabled = false;
+	}
+
+	if (swiper.isEnd) {
+		nextButton.disabled = true;
+	} else {
+		nextButton.disabled = false;
+	}
+}
+
+export function handlerChangeSlides(swiper, prevButton, nextButton) {
+	prevButton.addEventListener('click', () => swiper.slidePrev());
+	nextButton.addEventListener('click', () => swiper.slideNext());
 }

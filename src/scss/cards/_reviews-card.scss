@@ -1,0 +1,71 @@
+.swiper-slide {}
+
+.reviews-card {
+  padding: 2.5rem;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.40);
+  box-shadow: -5px -10px 40px 0px rgba(255, 255, 255, 0.00) inset;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+  min-height: 24.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .text {
+      p {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.48px;
+      }
+    }
+  }
+
+  &__avatar {
+    width: 6.5rem;
+    min-width: 6.5rem;
+    height: 6.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-right: 3rem;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.64;
+  }
+
+  &__counter {
+    margin-right: 130px;
+    color: $text-color-light;
+
+    &::first-letter {
+      color: $text-color;
+    }
+  }
+
+  &__info span {
+    display: block;
+
+
+    &:last-child {
+      color: $text-color-lighter;
+    }
+  }
+}
+
+
+
+.swiper-counter {}

@@ -13,6 +13,7 @@
   color: $text-color;
   position: relative;
   overflow: hidden;
+  width: fit-content;
   transition:
     $transition background-color,
     $transition color,
@@ -63,6 +64,19 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover:not(.actions__link) {
       filter: brightness(1.1);
+    }
+  }
+
+  &_dark {
+    background-color: $background-button-color;
+
+    &:focus:not(.actions__link) {
+      background-color: $background-button-color;
+      filter: brightness(1.1);
+    }
+
+    &.btn-icon .icon {
+      background-color: lighten($color: $background-button-color, $amount: 7%);
     }
   }
 }

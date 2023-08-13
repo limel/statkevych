@@ -1,0 +1,46 @@
+.blog-carousel {
+  background-color: $background-color-dark;
+  color: #fff;
+  padding: 7.5rem 0;
+  margin-bottom: 7.5rem;
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 300px;
+  }
+
+  .section-title {
+    margin: 0;
+  }
+
+  &__swiper {
+    max-width: 800px;
+    margin-right: 0;
+    padding-bottom: 96px;
+  }
+
+  .swiper-scrollbar {
+    bottom: 20px;
+    height: 1px;
+    background-color: #39445B;
+  }
+
+  .swiper-scrollbar-drag {
+    top: -20px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-image: url(../img/scrollbar-arrows.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+  }
+}

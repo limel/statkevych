@@ -1,0 +1,44 @@
+.reviews {
+  padding-bottom: 11rem;
+  position: relative;
+
+  .caption {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+
+    .section-title {
+      margin: 0;
+      max-width: 650px;
+    }
+  }
+
+  .carousel-navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-navigation__button {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #fff;
+
+    svg {
+      color: $text-color;
+      width: 1.5rem;
+      height: 1rem;
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
