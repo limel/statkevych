@@ -7,8 +7,8 @@
 	<title>main-page</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230810000223" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20230810000223" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230813195015" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230813195015" />
 </head>
 
 	<body>
@@ -71,7 +71,10 @@
 	<div class="container">
 		<span class="caption">Послуги</span>
 		<div role="group" class="carousel-navigation">
-			<button role="butto" class="carousel-navigation__button prev-button">
+			<button
+				role="button"
+				class="carousel-navigation__button services-prev-button"
+			>
 				<svg
 					width="13"
 					height="14"
@@ -83,7 +86,10 @@
 					<path d="M13 7L1 7M1 7L7 13M1 7L7 1" stroke="currentColor" />
 				</svg>
 			</button>
-			<button role="button" class="carousel-navigation__button next-button">
+			<button
+				role="button"
+				class="carousel-navigation__button services-next-button"
+			>
 				<svg
 					width="13"
 					height="14"
@@ -320,24 +326,58 @@
 		<span class="caption">Відгуки пацієнтів</span>
 		<div class="reviews__head">
 			<h2 class="section-title">Що говорять мої пацієнти.</h2>
-			<div class="navigation">
-				<button class="reviews-prev-button">prev</button>
-				<button class="reviews-next-button">next</button>
+			<div role="group" class="carousel-navigation">
+				<button
+					class="carousel-navigation__button reviews-prev-button"
+					role="button"
+				>
+					<svg
+						width="13"
+						height="14"
+						viewBox="0 0 13 14"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						class="carousel-navigation__icon"
+					>
+						<path d="M13 7L1 7M1 7L7 13M1 7L7 1" stroke="currentColor" />
+					</svg>
+				</button>
+				<button
+					class="carousel-navigation__button reviews-next-button"
+					role="button"
+				>
+					<svg
+						width="13"
+						height="14"
+						viewBox="0 0 13 14"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						class="carousel-navigation__icon"
+					>
+						<path d="M0 7H12M12 7L6 1M12 7L6 13" stroke="currentColor" />
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>
 	<div class="swiper reviews-swiper reviews__swiper">
 		<ul class="swiper-wrapper">
 			<li class="swiper-slide reviews-card">
-	<div class="reviews-card__top text">
-		<img src="" alt="" class="reviews-card__avatar" />
-		<p>
-			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
-			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
-		</p>
+	<div class="reviews-card__top">
+		<img
+			src="img/reviews/avatar1.jpg"
+			alt="img"
+			class="reviews-card__avatar"
+		/>
+		<div class="text">
+			<p>
+				Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+				свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+			</p>
+		</div>
 	</div>
 	<div class="reviews-card__bottom">
-		<span class="reviews-swiper-counter">1/4</span>
+		<span class="reviews-swiper-counter reviews-card__counter">1/4</span>
 		<div class="reviews-card__info">
 			<span>Юлія Супрун</span>
 			<span>56 років</span>
@@ -346,15 +386,21 @@
 </li>
 
 			<li class="swiper-slide reviews-card">
-	<div class="reviews-card__top text">
-		<img src="" alt="" class="reviews-card__avatar" />
-		<p>
-			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
-			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
-		</p>
+	<div class="reviews-card__top">
+		<img
+			src="img/reviews/avatar1.jpg"
+			alt="img"
+			class="reviews-card__avatar"
+		/>
+		<div class="text">
+			<p>
+				Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+				свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+			</p>
+		</div>
 	</div>
 	<div class="reviews-card__bottom">
-		<span class="reviews-swiper-counter">1/4</span>
+		<span class="reviews-swiper-counter reviews-card__counter">1/4</span>
 		<div class="reviews-card__info">
 			<span>Юлія Супрун</span>
 			<span>56 років</span>
@@ -363,15 +409,21 @@
 </li>
 
 			<li class="swiper-slide reviews-card">
-	<div class="reviews-card__top text">
-		<img src="" alt="" class="reviews-card__avatar" />
-		<p>
-			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
-			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
-		</p>
+	<div class="reviews-card__top">
+		<img
+			src="img/reviews/avatar1.jpg"
+			alt="img"
+			class="reviews-card__avatar"
+		/>
+		<div class="text">
+			<p>
+				Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+				свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+			</p>
+		</div>
 	</div>
 	<div class="reviews-card__bottom">
-		<span class="reviews-swiper-counter">1/4</span>
+		<span class="reviews-swiper-counter reviews-card__counter">1/4</span>
 		<div class="reviews-card__info">
 			<span>Юлія Супрун</span>
 			<span>56 років</span>
@@ -380,15 +432,21 @@
 </li>
 
 			<li class="swiper-slide reviews-card">
-	<div class="reviews-card__top text">
-		<img src="" alt="" class="reviews-card__avatar" />
-		<p>
-			Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
-			свою справу і пацієнтів, якому не шкода витраченого часу для людини.
-		</p>
+	<div class="reviews-card__top">
+		<img
+			src="img/reviews/avatar1.jpg"
+			alt="img"
+			class="reviews-card__avatar"
+		/>
+		<div class="text">
+			<p>
+				Щиро Вдячний лікарю Максиму Володимировичу, чудовий лікар, який любить
+				свою справу і пацієнтів, якому не шкода витраченого часу для людини.
+			</p>
+		</div>
 	</div>
 	<div class="reviews-card__bottom">
-		<span class="reviews-swiper-counter">1/4</span>
+		<span class="reviews-swiper-counter reviews-card__counter">1/4</span>
 		<div class="reviews-card__info">
 			<span>Юлія Супрун</span>
 			<span>56 років</span>
@@ -398,11 +456,183 @@
 
 		</ul>
 	</div>
+	<picture><source srcset="img/logo-bg.webp" type="image/webp"><img src="img/logo-bg.png" alt="img" class="reviews__bg-image" /></picture>
+</section>
+
+			<section class="blog-carousel" id="blog">
+	<div class="container">
+		<div class="blog-carousel__head">
+			<span class="caption">Блог</span>
+			<h2 class="section-title">Останні публікації в блозі.</h2>
+			<a href="#blog" class="btn-accent btn-icon btn-accent_dark">
+				Перевірте мій блог
+				<span class="icon">
+					<svg><use href="img/sprite.svg#arrow" /></svg>
+				</span>
+			</a>
+		</div>
+		<div class="swiper blog-carousel-swiper blog-carousel__swiper">
+			<div class="swiper-scrollbar"></div>
+			<ul class="swiper-wrapper">
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+				<li class="blog-carousel-card swiper-slide">
+	<a href="#">
+		<picture><source srcset="img/blog/blog1.webp" type="image/webp"><img src="img/blog/blog1.jpg" alt="img" class="blog-carousel-card__img" /></picture>
+		<div class="blog-carousel-card__description">
+			<span class="caption">ендопротезування</span>
+			<h3 class="blog-carousel-card__title">
+				Первинне ендопротезування колінного суглобу.
+			</h3>
+		</div>
+	</a>
+</li>
+
+			</ul>
+		</div>
+	</div>
+</section>
+
+			<section class="contacts">
+	<div class="container">
+		<span class="caption">Мої контакти</span>
+		<h2 class="section-title">Мої контакти.</h2>
+
+		<div class="contacts-info">
+			<div class="contacts-info__description">
+				<h3 class="contacts-info__title">
+					Київський Ортопедичний Центр Ендопротезування
+				</h3>
+				<ul class="contacts-info__schedule schedule">
+					<li class="schedule__item">Пн -Пт 08:00 - 20:00</li>
+					<li class="schedule__item">Сб 09:00 - 17:00</li>
+					<li class="schedule__item">Вс 09:00 - 15:00</li>
+				</ul>
+
+				<div class="contacts-info__social">
+					<h4 class="contacts-info__social-title">
+						Ви можете написати мені <br />
+						у соціальних мережах.
+					</h4>
+					<ul class="contacts-info__social-links">
+						<li class="contacts-info__social-item">
+							<a href="" class="contacts-info__social-link">
+								<svg><use href="img/sprite.svg#telegram" /></svg>
+							</a>
+						</li>
+						<li class="contacts-info__social-item">
+							<a href="" class="contacts-info__social-link">
+								<svg><use href="img/sprite.svg#instagram" /></svg>
+							</a>
+						</li>
+						<li class="contacts-info__social-item">
+							<a href="" class="contacts-info__social-link">
+								<svg><use href="img/sprite.svg#facebook" /></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="contacts-info__map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d485.8234173795973!2d30.542810235747954!3d50.41618899209435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf6bb2d7c5bd%3A0xe5fc5b5f50451774!2z0LLRg9C70LjRhtGPINCf0YDQvtGE0LXRgdC-0YDQsCDQn9GW0LTQstC40YHQvtGG0YzQutC-0LPQviwgMS8yNiwg0JrQuNGX0LIsIDAyMDAw!5e1!3m2!1suk!2sua!4v1691945097681!5m2!1suk!2sua"
+					width="755"
+					height="472"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
+			</div>
+		</div>
+	</div>
 </section>
 
 		</main>
 		<footer>
-	<script src="js/app.min.js?_v=20230810000223"></script>
+	<script src="js/app.min.js?_v=20230813195015"></script>
 </footer>
 	</body>
 </html>
