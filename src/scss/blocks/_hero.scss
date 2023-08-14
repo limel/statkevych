@@ -2,7 +2,7 @@
   position: relative;
   color: $text-color;
 
-  &.container {
+  .container {
     padding: 72px 64px 123px;
     display: flex;
     align-items: flex-start;
@@ -18,10 +18,11 @@
 
   & .img {
     position: absolute;
-    max-width: 500px;
-    width: 100%;
-    right: 64px;
+    width: 478px;
+    height: 645px;
     bottom: 0;
+    right: 64px;
+    z-index: -1;
   }
 }
 

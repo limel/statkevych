@@ -44,7 +44,6 @@
 	},
 	"homepage": "https://github.com/limel/statkevych",
 	"dependencies": {
-		"inputmask": "^5.0.8",
 		"swiper": "^10.1.0"
 	}
 }
