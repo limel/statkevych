@@ -55,144 +55,41 @@
 	</div>
 </header>
 
-		<main>
-			<section class="hero">
+
+		<main id="services-page">
+			<section class="services-hero">
 	<div class="container">
-		<span class="caption">Мої послуги</span>
-		<div class="hero-text">
-			<h1>Кваліфікована ортопедична допомога.</h1>
-			<p>
-				Кваліфікована ортопедична допомога для дітей та дорослих. Сучасне
-				обладнання. Без вихідних.
-			</p>
-			<button class="btn-accent btn-icon">
-				Записатися на прийом
-				<span class="icon">
-					<svg><use href="img/sprite.svg#arrow" /></svg>
-				</span>
-			</button>
+		<div class="services-hero__head">
+			<span class="caption">Мої послуги</span>
+			<h1 class="services-hero__title">
+				Комплексна ортопедична допомога для дітей та дорослих.
+			</h1>
 		</div>
-	</div>
-	<picture><source srcset="img/hero.webp" type="image/webp"><img class="img" src="img/hero.png" alt="img" /></picture>
-</section>
-
-			<section class="services-carousel">
-	<div class="container">
-		<span class="caption">Послуги</span>
-		<div role="group" class="carousel-navigation">
-			<button
-				role="button"
-				class="carousel-navigation__button services-prev-button"
-			>
-				<svg
-					width="13"
-					height="14"
-					viewBox="0 0 13 14"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					class="carousel-navigation__icon"
-				>
-					<path d="M13 7L1 7M1 7L7 13M1 7L7 1" stroke="currentColor" />
-				</svg>
-			</button>
-			<button
-				role="button"
-				class="carousel-navigation__button services-next-button"
-			>
-				<svg
-					width="13"
-					height="14"
-					viewBox="0 0 13 14"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					class="carousel-navigation__icon"
-				>
-					<path d="M0 7H12M12 7L6 1M12 7L6 13" stroke="currentColor" />
-				</svg>
-			</button>
-		</div>
-		<div class="swiper services-carousel-swiper services-carousel__swiper">
-			<ul class="swiper-wrapper">
-				<!-- @@loop("../cards/services-carousel-card.html", "./services.json") -->
-				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp" type="image/webp"><img src="img/services/image1.jpg" alt="img" class="services-carousel-card__img" /></picture>
-	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
-	</div>
-</li>
-
-				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp" type="image/webp"><img src="img/services/image1.jpg" alt="img" class="services-carousel-card__img" /></picture>
-	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
-	</div>
-</li>
-
-				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp" type="image/webp"><img src="img/services/image1.jpg" alt="img" class="services-carousel-card__img" /></picture>
-	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
-	</div>
-</li>
-
-				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp" type="image/webp"><img src="img/services/image1.jpg" alt="img" class="services-carousel-card__img" /></picture>
-	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
-	</div>
-</li>
-
-			</ul>
-		</div>
-	</div>
-</section>
-
-			<section id="about" class="about">
-	<div class="container">
-		<span class="caption">Про мене</span>
-
-		<div class="content">
-			<div class="text">
-				<h2 class="section-title">
-					Вже понад п'ять років я допомагаю людям повернутись до активного
-					життя.
-				</h2>
-				<div class="sticky">
-					<p>
-						Medica mente non medicamentis, що в перекладі з латини означає -
-						лікуй розумом, а не ліками. Такого правила дотримуюсь з кожним
-						пацієнтом, якого доводилось чи доведеться лікувати.
-					</p>
-					<button class="btn-accent btn-icon">
-						Записатися на прийом
-						<span class="icon">
-							<svg><use href="img/sprite.svg#arrow" /></svg>
-						</span>
-					</button>
-				</div>
+		<div class="services-hero__content">
+			<div class="text sticky">
+				<p>
+					Наша ортопедична клініка надає комплексну та спеціалізовану допомогу
+					людям будь-якого віку, від дітей до дорослих. Орієнтуючись на
+					досконалість та інновації, наша команда висококваліфікованих
+					спеціалістів-ортопедів займається діагностикою, лікуванням та
+					лікуванням широкого спектру захворювань опорно-рухового апарату.
+				</p>
+				<button class="btn-accent btn-icon">
+					Записатися на прийом
+					<span class="icon">
+						<svg><use href="img/sprite.svg#arrow" /></svg>
+					</span>
+				</button>
 			</div>
-			<div class="image">
-				<picture><source srcset="img/about/image.webp" type="image/webp"><img src="img/about/image.jpg" class="sticky__image" alt="img" /></picture>
-			</div>
-		</div>
-		<div class="text right">
-			<h3 class="h3">
-				Виключно індивідуальний підхід та дбайливе ставлення до пацієнтів.
-			</h3>
-			<p>
-				Поєднання досвіду та професіоналізму є запорукою забезпечення якості
-				моєї роботи. Моя мета – реабілітувати кожного пацієнта, який до нас
-				звертається.
-			</p>
+			<img
+				src="img/services/services-hero.jpg"
+				alt="img"
+				class="services-hero__img"
+			/>
 		</div>
 	</div>
 </section>
 
-			<!--  -->
 			<section class="services" id="services">
 	<div class="container">
 		<span class="caption">Види протезів</span>
@@ -285,48 +182,6 @@
 </li>
 
 		</ul>
-	</div>
-</section>
-
-			<section class="department">
-	<div class="container">
-		<div class="content text">
-			<span class="caption">Де мене знайти</span>
-			<h2 class="section-title">
-				<span class="section-title__icon">
-					<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="logo" /></picture>
-				</span>
-				Київський ортопедичний центр ендопротезування.
-			</h2>
-			<p>
-				Київський ортопедичний центр ендопротезування має багаторічний досвід
-				ендопротезування великих суглобів з 1989 року. Постійно нарощується
-				інтенсивність операцій, удосконалюється техніка їх проведення.
-				Запроваджуються нові методики та розвивається матеріальна база.
-			</p>
-
-			<button class="btn-accent btn-icon btn-accent_dark">
-				Докладніше про центр
-				<span class="icon">
-					<svg><use href="img/sprite.svg#arrow" /></svg>
-				</span>
-			</button>
-		</div>
-		<div class="image-grid">
-			<div class="image-grid__columns">
-				<picture><source srcset="img/department/image1.webp" type="image/webp"><img src="img/department/image1.jpg" alt="img" /></picture>
-				<picture><source srcset="img/department/image2.webp" type="image/webp"><img src="img/department/image2.jpg" alt="img" /></picture>
-			</div>
-			<div class="image-grid__columns">
-				<picture><source srcset="img/department/image3.webp" type="image/webp"><img src="img/department/image3.jpg" alt="img" /></picture>
-				<picture><source srcset="img/department/image4.webp" type="image/webp"><img src="img/department/image4.jpg" alt="img" /></picture>
-				<picture><source srcset="img/department/image5.webp" type="image/webp"><img src="img/department/image5.jpg" alt="img" /></picture>
-			</div>
-			<div class="image-grid__columns">
-				<picture><source srcset="img/department/image6.webp" type="image/webp"><img src="img/department/image6.jpg" alt="img" /></picture>
-				<picture><source srcset="img/department/image7.webp" type="image/webp"><img src="img/department/image7.jpg" alt="img" /></picture>
-			</div>
-		</div>
 	</div>
 </section>
 
