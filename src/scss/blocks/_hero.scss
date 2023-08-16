@@ -1,25 +1,32 @@
+/* stylelint-disable scss.lint.unknownAtRules */
+
 .hero {
   position: relative;
   color: $text-color;
+  container: hero/inline-size;
 
   .container {
-    padding: 72px 64px 123px;
+    padding: 72px 4rem 123px;
     display: flex;
     align-items: flex-start;
   }
 
   & .caption {
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 12.5rem;
+    max-width: 12.5rem;
     width: 100%;
-    margin-right: 24px;
-    margin-top: 36px;
+    margin-right: 1.5rem;
+    margin-top: 2rem;
   }
 
   & .img {
     position: absolute;
-    width: 478px;
-    height: 645px;
+    width: 33.2cqi; //478px;
+    max-width: 478px;
+    // height: 645px;
+    aspect-ratio: 478/645;
+    // height: 98cqb;
+    filter: brightness(1.2);
     bottom: 0;
     right: 64px;
     z-index: -1;

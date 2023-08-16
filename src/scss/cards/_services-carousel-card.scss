@@ -10,8 +10,21 @@
   height: 100%;
   z-index: 1;
   padding: 2rem;
+  cursor: pointer;
 
-
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $black-gradient;
+    display: block;
+    z-index: 1;
+    opacity: 1;
+    transition: $transition opacity;
+  }
 
   &::after {
     content: '';
@@ -20,9 +33,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: $balck-gradient;
+    background: $black-gradient-hover;
     display: block;
     z-index: -1;
+    opacity: 0;
+    transition: $transition opacity;
   }
 
   &__img {
@@ -36,7 +51,6 @@
     z-index: -1;
   }
 
-
   .services-carousel-card__text {
     flex: 1;
     display: flex;
@@ -44,6 +58,8 @@
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
@@ -61,5 +77,17 @@
     font-weight: 500;
     line-height: 1.5;
     text-decoration-line: underline;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
   }
 }

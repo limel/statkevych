@@ -22,7 +22,7 @@ export const images = () => {
 				progressive: true,
 				svgoPlugins: [{ removeViewBox: false }],
 				interlaced: true,
-				optimizationLevel: 3, //0 - 7
+				optimizationLevel: 2, //0 - 7
 			})
 		)
 		.pipe(app.gulp.dest(app.path.build.images))

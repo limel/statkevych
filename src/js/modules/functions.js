@@ -14,6 +14,29 @@ export function isWebp() {
 	});
 }
 
+function smoothScrollToAnchor(anchor) {
+	const target = document.querySelector(anchor);
+
+	if (target) {
+		window.scrollTo({
+			top: target.offsetTop,
+			behavior: 'smooth',
+		});
+	}
+}
+
+// Add event listeners to anchor links
+document.addEventListener('DOMContentLoaded', function () {
+	const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+	anchorLinks.forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+			smoothScrollToAnchor(link.getAttribute('href'));
+		});
+	});
+});
+
 export function createRipple(event) {
 	const button = event.currentTarget;
 	const ripple = document.createElement('span');
@@ -74,6 +97,15 @@ export function updateNavigationButtons(swiper, prevButton, nextButton) {
 		nextButton.disabled = true;
 	} else {
 		nextButton.disabled = false;
+	}
+}
+
+export function handleHeroImgPosition() {
+	const windowWidth = window.innerWidth;
+	if (windowWidth > 1568) {
+		const marginLeft = document.querySelector('.container').offsetLeft;
+		const heroImg = document.querySelector('.hero__img');
+		heroImg.style.right = marginLeft + 'px';
 	}
 }
 

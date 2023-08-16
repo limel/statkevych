@@ -2,14 +2,17 @@
   position: relative;
   padding-left: 445px;
 
-
-
   &__img {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     visibility: hidden;
+    max-width: 310px;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    aspect-ratio: 155/162;
     transition: $transition opacity, $transition visibility;
   }
 
