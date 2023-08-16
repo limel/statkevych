@@ -2033,9 +2033,10 @@ p {
   height: 100%;
   z-index: 1;
   padding: 2rem;
+  cursor: pointer;
 }
 
-.services-carousel-card::after {
+.services-carousel-card::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -2045,9 +2046,26 @@ p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 9, 9, 0.6)), color-stop(51.36%, rgba(9, 9, 9, 0.3)), to(rgba(9, 9, 9, 0.5)));
   background: linear-gradient(180deg, rgba(9, 9, 9, 0.6) 0%, rgba(9, 9, 9, 0.3) 51.36%, rgba(9, 9, 9, 0.5) 100%);
   display: block;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out opacity;
+  transition: 0.3s ease-in-out opacity;
+}
+
+.services-carousel-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 9, 9, 0.8)), color-stop(51.36%, rgba(9, 9, 9, 0.3)), to(rgba(9, 9, 9, 0.7)));
+  background: linear-gradient(180deg, rgba(9, 9, 9, 0.8) 0%, rgba(9, 9, 9, 0.3) 51.36%, rgba(9, 9, 9, 0.7) 100%);
+  display: block;
   z-index: -1;
-  -webkit-transition: 0.3s ease-in-out background;
-  transition: 0.3s ease-in-out background;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out opacity;
+  transition: 0.3s ease-in-out opacity;
 }
 
 .services-carousel-card__img {
@@ -2081,6 +2099,8 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .services-carousel-card__title {
@@ -2100,11 +2120,6 @@ p {
   text-decoration-line: underline;
 }
 
-.services-carousel-card:hover::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 9, 9, 0.8)), color-stop(51.36%, rgba(9, 9, 9, 0.3)), to(rgba(9, 9, 9, 0.7)));
-  background: linear-gradient(180deg, rgba(9, 9, 9, 0.8) 0%, rgba(9, 9, 9, 0.3) 51.36%, rgba(9, 9, 9, 0.7) 100%);
-}
-
 .services-card {
   position: relative;
   padding-left: 445px;
@@ -2116,6 +2131,13 @@ p {
   left: 0;
   opacity: 0;
   visibility: hidden;
+  max-width: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  width: 100%;
+  aspect-ratio: 155/162;
   -webkit-transition: 0.3s ease-in-out opacity, 0.3s ease-in-out visibility;
   transition: 0.3s ease-in-out opacity, 0.3s ease-in-out visibility;
 }
@@ -2280,13 +2302,16 @@ p {
   -webkit-box-orient: vertical;
 }
 
+/* stylelint-disable scss.lint.unknownAtRules */
+
 .hero {
   position: relative;
   color: #1C253A;
+  container: hero/inline-size;
 }
 
 .hero .container {
-  padding: 72px 64px 123px;
+  padding: 72px 4rem 123px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2296,17 +2321,20 @@ p {
 }
 
 .hero .caption {
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 12.5rem;
+  max-width: 12.5rem;
   width: 100%;
-  margin-right: 24px;
-  margin-top: 36px;
+  margin-right: 1.5rem;
+  margin-top: 2rem;
 }
 
 .hero .img {
   position: absolute;
-  width: 478px;
-  height: 645px;
+  width: 33.2cqi;
+  max-width: 478px;
+  aspect-ratio: 478/645;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
   bottom: 0;
   right: 64px;
   z-index: -1;
@@ -2411,7 +2439,20 @@ p {
 }
 
 .about .image {
+  position: relative;
   margin-top: 9.25rem;
+}
+
+.about .parallax-layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: 0.3s ease-in-out translate;
+  transition: 0.3s ease-in-out translate;
 }
 
 .about .content {
@@ -2742,6 +2783,14 @@ p {
 
 .contacts-info__map {
   position: relative;
+  max-width: 755px;
+  width: 100%;
+  aspect-ratio: 16/10;
+}
+
+.contacts-info__map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .services-hero {
@@ -2809,6 +2858,12 @@ p {
           flex: 1;
 }
 
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .btn-primary:hover:not(.actions__link, .btn-accent),
   .actions__button:hover:not(.actions__link, .btn-accent),
@@ -2839,6 +2894,14 @@ p {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
+  }
+
+  .services-carousel-card:hover::before {
+    opacity: 0;
+  }
+
+  .services-carousel-card:hover::after {
+    opacity: 1;
   }
 
   .services-card:hover .services-card__description::after {
