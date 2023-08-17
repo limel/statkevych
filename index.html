@@ -9,10 +9,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230816195716"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230817150649"
 		rel="stylesheet"
 	/>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230816195716" />
+	<script src="js/app.min.js?_v=20230817150649" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230817150649" />
 </head>
 
 	<body>
@@ -22,33 +23,45 @@
 		<nav class="navigation">
 			<ul class="navigation-list">
 				<li class="navigation-list__item">
-					<a href="/statkevych/services.html" class="navigation-list__link">
+					<a
+						href="/statkevych/services.html"
+						class="navigation-list__link"
+						aria-label="link"
+					>
 						Послуги
 					</a>
 				</li>
 				<li class="navigation-list__item">
-					<a href="#about" class="navigation-list__link">Про мене</a>
+					<a href="#about" class="navigation-list__link" aria-label="link"
+						>Про мене</a
+					>
 				</li>
 				<li class="navigation-list__item">
-					<a href="#contacts" class="navigation-list__link">Контакти </a>
+					<a href="#contacts" class="navigation-list__link" aria-label="link"
+						>Контакти
+					</a>
 				</li>
 				<li class="navigation-list__item">
-					<a href="#" class="navigation-list__link">Блог</a>
+					<a href="/" class="navigation-list__link" aria-label="link">Блог</a>
 				</li>
 			</ul>
 			<menu class="navigation-actions">
 				<li class="actions__item">
-					<a href="#" title="instagram" class="actions__link">
+					<a href="/" title="instagram" class="actions__link" aria-label="link">
 						<svg><use href="img/sprite.svg#instagram" /></svg>
 					</a>
 				</li>
 				<li class="actions__item">
-					<a href="#" title="instagram" class="actions__link">
+					<a href="/" title="instagram" class="actions__link" aria-label="link">
 						<svg><use href="img/sprite.svg#telegram" /></svg>
 					</a>
 				</li>
 				<li class="actions__item">
-					<button title="callbackform" class="actions__button">
+					<button
+						class="actions__button modal-open"
+						title="Безкоштовна консультація"
+						aria-label="Безкоштовна консультація"
+					>
 						Безкоштовна консультація
 					</button>
 				</li>
@@ -67,7 +80,11 @@
 				Кваліфікована ортопедична допомога для дітей та дорослих. Сучасне
 				обладнання. Без вихідних.
 			</p>
-			<button class="btn-accent btn-icon">
+			<button
+				class="btn-accent btn-icon modal-open"
+				title="Записатися на прийом"
+				aria-label="Записатися на прийом"
+			>
 				Записатися на прийом
 				<span class="icon">
 					<svg><use href="img/sprite.svg#arrow" /></svg>
@@ -75,7 +92,13 @@
 			</button>
 		</div>
 	</div>
-	<picture><source srcset="img/hero.webp, img/hero@2x.webp 2x" type="image/webp"><img class="img hero__img" id="heroImg" src="img/hero.png" srcset="img/hero@2x.png 2x" alt="img" /></picture>
+	<img
+		class="img hero__img"
+		id="heroImg"
+		src="img/hero.png"
+		srcset="img/hero@2x.png 2x"
+		alt="img"
+	/>
 </section>
 
 			<section class="services-carousel">
@@ -85,6 +108,8 @@
 			<button
 				role="button"
 				class="carousel-navigation__button services-prev-button"
+				title="попередній слайд"
+				aria-label="попередній слайд"
 			>
 				<svg
 					width="13"
@@ -100,6 +125,8 @@
 			<button
 				role="button"
 				class="carousel-navigation__button services-next-button"
+				title="наступний слайд"
+				aria-label="наступний слайд"
 			>
 				<svg
 					width="13"
@@ -116,34 +143,66 @@
 		<div class="swiper services-carousel-swiper services-carousel__swiper">
 			<ul class="swiper-wrapper">
 				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp, img/services/image1@2x.webp 2x" type="image/webp"><img src="img/services/image1.jpg" srcset="img/services/image1@2x.jpg 2x" alt="img" class="services-carousel-card__img" /></picture>
+	<img
+		src="img/services/image1.jpg"
+		srcset="img/services/image1@2x.jpg 2x"
+		alt="img"
+		class="services-carousel-card__img"
+		loading="lazy"
+	/>
 	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
+		<h2 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h2>
+		<a href="/" class="services-carousel-card__link" aria-label="link"
+			>Дізнатися більше</a
+		>
 	</div>
 </li>
 
 				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp, img/services/image1@2x.webp 2x" type="image/webp"><img src="img/services/image1.jpg" srcset="img/services/image1@2x.jpg 2x" alt="img" class="services-carousel-card__img" /></picture>
+	<img
+		src="img/services/image1.jpg"
+		srcset="img/services/image1@2x.jpg 2x"
+		alt="img"
+		class="services-carousel-card__img"
+		loading="lazy"
+	/>
 	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
+		<h2 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h2>
+		<a href="/" class="services-carousel-card__link" aria-label="link"
+			>Дізнатися більше</a
+		>
 	</div>
 </li>
 
 				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp, img/services/image1@2x.webp 2x" type="image/webp"><img src="img/services/image1.jpg" srcset="img/services/image1@2x.jpg 2x" alt="img" class="services-carousel-card__img" /></picture>
+	<img
+		src="img/services/image1.jpg"
+		srcset="img/services/image1@2x.jpg 2x"
+		alt="img"
+		class="services-carousel-card__img"
+		loading="lazy"
+	/>
 	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
+		<h2 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h2>
+		<a href="/" class="services-carousel-card__link" aria-label="link"
+			>Дізнатися більше</a
+		>
 	</div>
 </li>
 
 				<li class="swiper-slide services-carousel-card">
-	<picture><source srcset="img/services/image1.webp, img/services/image1@2x.webp 2x" type="image/webp"><img src="img/services/image1.jpg" srcset="img/services/image1@2x.jpg 2x" alt="img" class="services-carousel-card__img" /></picture>
+	<img
+		src="img/services/image1.jpg"
+		srcset="img/services/image1@2x.jpg 2x"
+		alt="img"
+		class="services-carousel-card__img"
+		loading="lazy"
+	/>
 	<div class="services-carousel-card__text">
-		<h3 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h3>
-		<a href="#" class="services-carousel-card__link">Дізнатися більше</a>
+		<h2 class="services-carousel-card__title">Консультації ортопедичного та травматологічного профілю</h2>
+		<a href="/" class="services-carousel-card__link" aria-label="link"
+			>Дізнатися більше</a
+		>
 	</div>
 </li>
 
@@ -168,7 +227,11 @@
 						лікуй розумом, а не ліками. Такого правила дотримуюсь з кожним
 						пацієнтом, якого доводилось чи доведеться лікувати.
 					</p>
-					<button class="btn-accent btn-icon">
+					<button
+						class="btn-accent btn-icon modal-open"
+						title="Записатися на прийом"
+						aria-label="Записатися на прийом"
+					>
 						Записатися на прийом
 						<span class="icon">
 							<svg><use href="img/sprite.svg#arrow" /></svg>
@@ -177,8 +240,13 @@
 				</div>
 			</div>
 			<div class="image image-parallax">
-				<picture><source srcset="img/about/image.webp, img/about/image@2x.webp 2x" type="image/webp"><img src="img/about/image.jpg" srcset="img/about/image@2x.jpg 2x" class="sticky__image" alt="img" /></picture>
-				<!-- <div class="parallax-layer" data-rellax-speed="7"></div> -->
+				<img
+					src="img/about/image.jpg"
+					srcset="img/about/image@2x.jpg 2x"
+					alt="img"
+					loading="lazy"
+				/>
+				<div class="parallax"></div>
 			</div>
 		</div>
 		<div class="text right">
@@ -200,8 +268,14 @@
 		<span class="caption">Види протезів</span>
 		<ul class="services__list">
 			<li class="services-card">
-	<a href="#">
-		<img src="img/services/card1.jpg " srcset="img/services/card1@2x.jpg 2x" alt="img" class="services-card__img" />
+	<a href="/" aria-label="link">
+		<img
+			src="img/services/card1.jpg "
+			srcset="img/services/card1@2x.jpg 2x"
+			alt="img"
+			class="services-card__img"
+			loading="lazy"
+		/>
 		<div class="services-card__description">
 			<h3 class="services-card__title">
 				Протези верхніх кінцівок
@@ -229,8 +303,14 @@
 </li>
 
 			<li class="services-card">
-	<a href="#">
-		<img src="img/services/card1.jpg " srcset="img/services/card1@2x.jpg 2x" alt="img" class="services-card__img" />
+	<a href="/" aria-label="link">
+		<img
+			src="img/services/card1.jpg "
+			srcset="img/services/card1@2x.jpg 2x"
+			alt="img"
+			class="services-card__img"
+			loading="lazy"
+		/>
 		<div class="services-card__description">
 			<h3 class="services-card__title">
 				Протези верхніх кінцівок
@@ -258,8 +338,14 @@
 </li>
 
 			<li class="services-card">
-	<a href="#">
-		<img src="img/services/card1.jpg " srcset="img/services/card1@2x.jpg 2x" alt="img" class="services-card__img" />
+	<a href="/" aria-label="link">
+		<img
+			src="img/services/card1.jpg "
+			srcset="img/services/card1@2x.jpg 2x"
+			alt="img"
+			class="services-card__img"
+			loading="lazy"
+		/>
 		<div class="services-card__description">
 			<h3 class="services-card__title">
 				Протези верхніх кінцівок
@@ -296,7 +382,7 @@
 			<span class="caption">Де мене знайти</span>
 			<h2 class="section-title">
 				<span class="section-title__icon">
-					<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="logo" /></picture>
+					<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="logo" loading="lazy" /></picture>
 				</span>
 				Київський ортопедичний центр ендопротезування.
 			</h2>
@@ -307,7 +393,11 @@
 				Запроваджуються нові методики та розвивається матеріальна база.
 			</p>
 
-			<button class="btn-accent btn-icon btn-accent_dark">
+			<button
+				class="btn-accent btn-icon btn-accent_dark"
+				title="Докладніше про центр"
+				aria-label="Докладніше про центр"
+			>
 				Докладніше про центр
 				<span class="icon">
 					<svg><use href="img/sprite.svg#arrow" /></svg>
@@ -316,17 +406,52 @@
 		</div>
 		<div class="image-grid">
 			<div class="image-grid__columns">
-				<picture><source srcset="img/department/image1.webp, img/department/image1@2x.webp 2x" type="image/webp"><img src="img/department/image1.jpg" srcset="img/department/image1@2x.jpg 2x" alt="img" /></picture>
-				<picture><source srcset="img/department/image2.webp, img/department/image2@2x.webp 2x" type="image/webp"><img src="img/department/image2.jpg"  srcset="img/department/image2@2x.jpg 2x"alt="img" /></picture>
+				<img
+					loading="lazy"
+					src="img/department/image1.jpg"
+					srcset="img/department/image1@2x.jpg 2x"
+					alt="img"
+				/>
+				<img
+					loading="lazy"
+					src="img/department/image2.jpg"
+					srcset="img/department/image2@2x.jpg 2x"
+					alt="img"
+				/>
 			</div>
 			<div class="image-grid__columns">
-				<picture><source srcset="img/department/image3.webp, img/department/image3@2x.webp 2x" type="image/webp"><img src="img/department/image3.jpg"  srcset="img/department/image3@2x.jpg 2x" alt="img" /></picture>
-				<picture><source srcset="img/department/image4.webp, img/department/image4@2x.webp 2x" type="image/webp"><img src="img/department/image4.jpg"  srcset="img/department/image4@2x.jpg 2x" alt="img" /></picture>
-				<picture><source srcset="img/department/image5.webp, img/department/image5@2x.webp 2x" type="image/webp"><img src="img/department/image5.jpg"  srcset="img/department/image5@2x.jpg 2x" alt="img" /></picture>
+				<img
+					loading="lazy"
+					src="img/department/image3.jpg"
+					srcset="img/department/image3@2x.jpg 2x"
+					alt="img"
+				/>
+				<img
+					loading="lazy"
+					src="img/department/image4.jpg"
+					srcset="img/department/image4@2x.jpg 2x"
+					alt="img"
+				/>
+				<img
+					loading="lazy"
+					src="img/department/image5.jpg"
+					srcset="img/department/image5@2x.jpg 2x"
+					alt="img"
+				/>
 			</div>
 			<div class="image-grid__columns">
-				<picture><source srcset="img/department/image6.webp, img/department/image6@2x.webp 2x" type="image/webp"><img src="img/department/image6.jpg"  srcset="img/department/image6@2x.jpg 2x" alt="img" /></picture>
-				<picture><source srcset="img/department/image7.webp, img/department/image7@2x.webp 2x" type="image/webp"><img src="img/department/image7.jpg"  srcset="img/department/image7@2x.jpg 2x" alt="img" /></picture>
+				<img
+					loading="lazy"
+					src="img/department/image6.jpg"
+					srcset="img/department/image6@2x.jpg 2x"
+					alt="img"
+				/>
+				<img
+					loading="lazy"
+					src="img/department/image7.jpg"
+					srcset="img/department/image7@2x.jpg 2x"
+					alt="img"
+				/>
 			</div>
 		</div>
 	</div>
@@ -341,6 +466,8 @@
 				<button
 					class="carousel-navigation__button reviews-prev-button"
 					role="button"
+					title="попередній слайд"
+					aria-label="попередній слайд"
 				>
 					<svg
 						width="13"
@@ -356,6 +483,8 @@
 				<button
 					class="carousel-navigation__button reviews-next-button"
 					role="button"
+					title="наступний слайд"
+					aria-label="наступний слайд"
 				>
 					<svg
 						width="13"
@@ -380,6 +509,7 @@
 			srcset="img/reviews/avatar1@2x.jpg 2x"
 			alt="img"
 			class="reviews-card__avatar"
+			loading="lazy"
 		/>
 		<div class="text">
 			<p>
@@ -404,6 +534,7 @@
 			srcset="img/reviews/avatar1@2x.jpg 2x"
 			alt="img"
 			class="reviews-card__avatar"
+			loading="lazy"
 		/>
 		<div class="text">
 			<p>
@@ -428,6 +559,7 @@
 			srcset="img/reviews/avatar1@2x.jpg 2x"
 			alt="img"
 			class="reviews-card__avatar"
+			loading="lazy"
 		/>
 		<div class="text">
 			<p>
@@ -452,6 +584,7 @@
 			srcset="img/reviews/avatar1@2x.jpg 2x"
 			alt="img"
 			class="reviews-card__avatar"
+			loading="lazy"
 		/>
 		<div class="text">
 			<p>
@@ -479,7 +612,11 @@
 		<div class="blog-carousel__head">
 			<span class="caption">Блог</span>
 			<h2 class="section-title">Останні публікації в блозі.</h2>
-			<a href="#blog" class="btn-accent btn-icon btn-accent_dark">
+			<a
+				href="#blog"
+				class="btn-accent btn-icon btn-accent_dark"
+				aria-label="link"
+			>
 				Перевірте мій блог
 				<span class="icon">
 					<svg><use href="img/sprite.svg#arrow" /></svg>
@@ -490,8 +627,14 @@
 			<div class="swiper-scrollbar"></div>
 			<ul class="swiper-wrapper">
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -502,8 +645,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -514,8 +663,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -526,8 +681,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -538,8 +699,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -550,8 +717,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -562,8 +735,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -574,8 +753,14 @@
 </li>
 
 				<li class="blog-carousel-card swiper-slide">
-	<a href="#">
-		<picture><source srcset="img/blog/blog1.webp, img/blog/blog1@2x.webp 2x" type="image/webp"><img src="img/blog/blog1.jpg" srcset="img/blog/blog1@2x.jpg 2x" alt="img" class="blog-carousel-card__img" /></picture>
+	<a href="/" aria-label="link">
+		<img
+			src="img/blog/blog1.jpg"
+			srcset="img/blog/blog1@2x.jpg 2x"
+			alt="img"
+			class="blog-carousel-card__img"
+			loading="lazy"
+		/>
 		<div class="blog-carousel-card__description">
 			<span class="caption">ендопротезування</span>
 			<h3 class="blog-carousel-card__title">
@@ -613,17 +798,17 @@
 					</h4>
 					<ul class="contacts-info__social-links">
 						<li class="contacts-info__social-item">
-							<a href="" class="contacts-info__social-link">
+							<a href="" class="contacts-info__social-link" aria-label="link">
 								<svg><use href="img/sprite.svg#telegram" /></svg>
 							</a>
 						</li>
 						<li class="contacts-info__social-item">
-							<a href="" class="contacts-info__social-link">
+							<a href="" class="contacts-info__social-link" aria-label="link">
 								<svg><use href="img/sprite.svg#instagram" /></svg>
 							</a>
 						</li>
 						<li class="contacts-info__social-item">
-							<a href="" class="contacts-info__social-link">
+							<a href="" class="contacts-info__social-link" aria-label="link">
 								<svg><use href="img/sprite.svg#facebook" /></svg>
 							</a>
 						</li>
@@ -632,6 +817,7 @@
 			</div>
 			<div class="contacts-info__map">
 				<iframe
+					title="map"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d485.8234173795973!2d30.542810235747954!3d50.41618899209435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf6bb2d7c5bd%3A0xe5fc5b5f50451774!2z0LLRg9C70LjRhtGPINCf0YDQvtGE0LXRgdC-0YDQsCDQn9GW0LTQstC40YHQvtGG0YzQutC-0LPQviwgMS8yNiwg0JrQuNGX0LIsIDAyMDAw!5e1!3m2!1suk!2sua!4v1691945097681!5m2!1suk!2sua"
 					style="border: 0"
 					allowfullscreen=""
@@ -666,7 +852,12 @@
 						Заповніть форму і лікар зв'яжеться з вами впродовж однієї години.
 					</span>
 				</fieldset>
-				<button type="submit" class="btn-accent btn-icon">
+				<button
+					type="submit"
+					class="btn-accent btn-icon"
+					title="Надіслати"
+					aria-label="Надіслати"
+				>
 					Надіслати
 					<span class="icon">
 						<svg><use href="img/sprite.svg#arrow" /></svg>
@@ -674,7 +865,15 @@
 				</button>
 			</form>
 		</div>
-		<picture><source srcset="img/callback-form.webp, img/callback-form@2x.webp 2x" type="image/webp"><img src="img/callback-form.jpg" srcset="img/callback-form@2x.jpg 2x"  alt="img" class="callback__img" /></picture>
+		<div class="image-parallax callback__img">
+			<img
+				loading="lazy"
+				src="img/callback-form.jpg"
+				srcset="img/callback-form@2x.jpg 2x"
+				alt="img"
+			/>
+			<div class="parallax"></div>
+		</div>
 	</div>
 </section>
 
@@ -691,16 +890,18 @@
 			<h3 class="footer-menu__title">Розділи</h3>
 			<ul class="footer-menu__list">
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Послуги</a>
+					<a href="" class="footer-menu__link" aria-label="link">Послуги</a>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Про мене</a>
+					<a href="" class="footer-menu__link" aria-label="link">Про мене</a>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Види протезів</a>
+					<a href="" class="footer-menu__link" aria-label="link"
+						>Види протезів</a
+					>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Блог</a>
+					<a href="" class="footer-menu__link" aria-label="link">Блог</a>
 				</li>
 			</ul>
 		</nav>
@@ -708,13 +909,19 @@
 			<h3 class="footer-contacts__title">Контакти</h3>
 			<ul class="footer-contacts__list">
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link">+099 55 226 09 32</a>
+					<a href="" class="footer-contacts__link" aria-label="link"
+						>+099 55 226 09 32</a
+					>
 				</li>
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link">statkevich@gmail.com</a>
+					<a href="" class="footer-contacts__link" aria-label="link"
+						>statkevich@gmail.com</a
+					>
 				</li>
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link">Дружби Народів 26</a>
+					<a href="" class="footer-contacts__link" aria-label="link"
+						>Дружби Народів 26</a
+					>
 				</li>
 			</ul>
 		</nav>
@@ -722,28 +929,28 @@
 			<h3 class="footer-social__title">Соціальні мережі</h3>
 			<ul class="footer-social__list">
 				<li class="footer-social__item">
-					<a href="" class="footer-social__link">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="img/sprite.svg#twitter" />
 						</svg>
 					</a>
 				</li>
 				<li class="footer-social__item footer-social__item_small">
-					<a href="" class="footer-social__link">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="img/sprite.svg#instagram" />
 						</svg>
 					</a>
 				</li>
 				<li class="footer-social__item footer-social__item_small">
-					<a href="" class="footer-social__link">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="img/sprite.svg#facebook" />
 						</svg>
 					</a>
 				</li>
 				<li class="footer-social__item">
-					<a href="" class="footer-social__link">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="img/sprite.svg#telegram" />
 						</svg>
@@ -754,7 +961,57 @@
 	</div>
 </footer>
 
-<script src="js/app.min.js?_v=20230816195716"></script>
+		<div class="modal">
+	<div class="modal__overlay modal-close"></div>
+	<form action="" class="modal__body">
+		<button
+			class="btn-modal modal-close"
+			title="закрти модальне вікно"
+			aria-label="закрти модальне вікно"
+		>
+			<svg
+				width="14"
+				height="14"
+				viewBox="0 0 14 14"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M7.00023 5.58672L11.9502 0.636719L13.3642 2.05072L8.41423 7.00072L13.3642 11.9507L11.9502 13.3647L7.00023 8.41472L2.05023 13.3647L0.63623 11.9507L5.58623 7.00072L0.63623 2.05072L2.05023 0.636719L7.00023 5.58672Z"
+					fill="currentColor"
+				/>
+			</svg>
+		</button>
+		<fieldset>
+			<legend class="section-title">Запис на консультацію</legend>
+			<label class="input">
+				<span class="input__label">Ваше ім'я</span>
+				<input type="text" class="input__input" placeholder="Ваше ім'я" />
+			</label>
+			<label class="input">
+				<span class="input__label">Ваш номер телефону</span>
+				<input
+					type="tel"
+					class="input__input"
+					placeholder="+380 (___) ___ ___ ___"
+				/>
+			</label>
+			<span class="callback__notice">
+				Заповніть форму і лікар зв'яжеться з вами впродовж однієї години.
+			</span>
+		</fieldset>
+		<button
+			type="submit"
+			class="btn-accent btn-icon"
+			title="Надіслати"
+			aria-label="Надіслати"
+		>
+			Надіслати
+			<span class="icon">
+				<svg><use href="img/sprite.svg#arrow" /></svg>
+			</span>
+		</button>
+	</form>
+</div>
 
 	</body>
 </html>
