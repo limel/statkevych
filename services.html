@@ -9,11 +9,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230817150649"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230821202601"
 		rel="stylesheet"
 	/>
-	<script src="js/app.min.js?_v=20230817150649" defer></script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230817150649" />
+	<script src="js/app.min.js?_v=20230821202601" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230821202601" />
 </head>
 
 	<body>
@@ -21,6 +21,10 @@
 	<div class="container header__container">
 		<a href="/" class="logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture></a>
 		<nav class="navigation">
+			<button class="menu-toggle">
+				<span></span>
+				<span></span>
+			</button>
 			<ul class="navigation-list">
 				<li class="navigation-list__item">
 					<a
@@ -32,13 +36,13 @@
 					</a>
 				</li>
 				<li class="navigation-list__item">
-					<a href="#about" class="navigation-list__link" aria-label="link"
-						>Про мене</a
-					>
+					<a href="#about" class="navigation-list__link" aria-label="link">
+						Про мене
+					</a>
 				</li>
 				<li class="navigation-list__item">
-					<a href="#contacts" class="navigation-list__link" aria-label="link"
-						>Контакти
+					<a href="#contacts" class="navigation-list__link" aria-label="link">
+						Контакти
 					</a>
 				</li>
 				<li class="navigation-list__item">
@@ -67,8 +71,14 @@
 				</li>
 			</menu>
 		</nav>
+		<button class="menu-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 	</div>
 </header>
+<div class="header-overlay"></div>
 
 
 		<main id="services-page">
@@ -126,7 +136,7 @@
 			loading="lazy"
 		/>
 		<div class="services-card__description">
-			<h3 class="services-card__title">
+			<h2 class="services-card__title">
 				Протези верхніх кінцівок
 				<span class="services-card__title-icon">
 					<svg
@@ -143,12 +153,12 @@
 						/>
 					</svg>
 				</span>
-			</h3>
+			</h2>
 			<p class="services-card__text">
 				Протези верхніх кінцівок поділяються за рівнями ампутації
 			</p>
-		</div></a
-	>
+		</div>
+	</a>
 </li>
 
 			<li class="services-card">
@@ -161,7 +171,7 @@
 			loading="lazy"
 		/>
 		<div class="services-card__description">
-			<h3 class="services-card__title">
+			<h2 class="services-card__title">
 				Протези верхніх кінцівок
 				<span class="services-card__title-icon">
 					<svg
@@ -178,12 +188,12 @@
 						/>
 					</svg>
 				</span>
-			</h3>
+			</h2>
 			<p class="services-card__text">
 				Протези верхніх кінцівок поділяються за рівнями ампутації
 			</p>
-		</div></a
-	>
+		</div>
+	</a>
 </li>
 
 			<li class="services-card">
@@ -196,7 +206,7 @@
 			loading="lazy"
 		/>
 		<div class="services-card__description">
-			<h3 class="services-card__title">
+			<h2 class="services-card__title">
 				Протези верхніх кінцівок
 				<span class="services-card__title-icon">
 					<svg
@@ -213,12 +223,12 @@
 						/>
 					</svg>
 				</span>
-			</h3>
+			</h2>
 			<p class="services-card__text">
 				Протези верхніх кінцівок поділяються за рівнями ампутації
 			</p>
-		</div></a
-	>
+		</div>
+	</a>
 </li>
 
 		</ul>
@@ -600,8 +610,8 @@
 			<section class="callback">
 	<div class="container">
 		<div class="callback__description">
-			<span class="caption"> Контактна форма </span>
 			<form action="" class="callback__form">
+				<span class="caption"> Контактна форма </span>
 				<fieldset>
 					<legend class="section-title">Зв'яжіться зі мною.</legend>
 					<label class="input">
@@ -664,9 +674,9 @@
 					<a href="" class="footer-menu__link" aria-label="link">Про мене</a>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link" aria-label="link"
-						>Види протезів</a
-					>
+					<a href="" class="footer-menu__link" aria-label="link">
+						Види протезів
+					</a>
 				</li>
 				<li class="footer-menu__item">
 					<a href="" class="footer-menu__link" aria-label="link">Блог</a>
@@ -677,19 +687,19 @@
 			<h3 class="footer-contacts__title">Контакти</h3>
 			<ul class="footer-contacts__list">
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link" aria-label="link"
-						>+099 55 226 09 32</a
-					>
+					<a href="" class="footer-contacts__link" aria-label="link">
+						+099 55 226 09 32
+					</a>
 				</li>
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link" aria-label="link"
-						>statkevich@gmail.com</a
-					>
+					<a href="" class="footer-contacts__link" aria-label="link">
+						statkevich@gmail.com
+					</a>
 				</li>
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link" aria-label="link"
-						>Дружби Народів 26</a
-					>
+					<a href="" class="footer-contacts__link" aria-label="link">
+						Дружби Народів 26
+					</a>
 				</li>
 			</ul>
 		</nav>
