@@ -1371,6 +1371,10 @@ p {
   line-height: 1.64;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .caption {
   color: inherit;
   font-family: Montserrat;
@@ -1655,11 +1659,25 @@ textarea {
   margin-top: 4.375rem;
 }
 
-.image-grid__columns picture {
+.image-grid__item {
   position: relative;
 }
 
-.image-grid__columns picture:after {
+.image-grid__item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(28, 37, 58, 0.46);
+}
+
+.image-grid__item picture {
+  position: relative;
+}
+
+.image-grid__item picture:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1761,10 +1779,19 @@ textarea {
 }
 
 .header .logo {
+  max-width: 124px;
+  width: 100%;
+  height: 68px;
   margin-right: 95px;
   min-width: 9.8cqi;
   -webkit-transition: 0.3s ease-in-out min-width, 0.3s ease-in-out height;
   transition: 0.3s ease-in-out min-width, 0.3s ease-in-out height;
+}
+
+.header .logo svg {
+  width: 100%;
+  height: 100%;
+  color: #1C253A;
 }
 
 .header .navigation {
@@ -2012,6 +2039,15 @@ textarea {
 
 .footer__logo {
   margin-bottom: 1.5rem;
+  max-width: 213px;
+  height: 95px;
+  width: 100%;
+}
+
+.footer__logo svg {
+  width: 100%;
+  height: 100%;
+  color: #fff;
 }
 
 .footer__copyright {
@@ -2068,14 +2104,13 @@ textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 0.75rem 1.375rem;
-  max-width: 160px;
 }
 
 .footer .footer-social__item {
   border-radius: 50%;
   background-color: #2B3753;
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .footer .footer-social__link {
@@ -2093,16 +2128,6 @@ textarea {
 }
 
 .footer .footer-social__link svg {
-  width: 2rem;
-  height: 2rem;
-}
-
-.footer .footer-social__item_small {
-  width: 3rem;
-  height: 3rem;
-}
-
-.footer .footer-social__item_small svg {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -2190,7 +2215,6 @@ textarea {
 .modal.active {
   padding-right: 8px;
   pointer-events: inherit;
-  overflow-y: scroll;
 }
 
 .modal.active .modal__overlay {
@@ -2746,7 +2770,6 @@ textarea {
 }
 
 .department .content .btn-accent {
-  width: 100%;
   margin-top: 3rem;
 }
 
@@ -3115,9 +3138,17 @@ textarea {
     padding-right: 0;
   }
 
+  .mobile-only {
+    display: block;
+  }
+
   .section-title {
     font-size: 2.5rem;
     margin: 1rem 0;
+  }
+
+  .text p {
+    line-height: 1.4;
   }
 
   .h3 {
@@ -3148,7 +3179,7 @@ textarea {
   }
 
   .header .navigation {
-    padding: 6rem 1rem 1rem 1rem;
+    padding: 9rem 1rem 1rem 1rem;
     position: fixed;
     top: -16px;
     right: 0;
@@ -3251,16 +3282,23 @@ textarea {
     margin-bottom: 4.25rem;
   }
 
+  .callback__notice {
+    line-height: 1.4;
+    margin-top: 1rem;
+  }
+
   .callback .container {
     gap: 2rem;
   }
 
-  .callback .btn-accent {
-    width: 100%;
-  }
-
   .footer {
     padding: 3rem 0;
+  }
+
+  .footer__logo {
+    max-width: 124px;
+    height: 68px;
+    margin-bottom: 0;
   }
 
   .footer__head {
@@ -3276,17 +3314,13 @@ textarea {
     gap: 3rem;
   }
 
-  .footer .footer-social {
-    margin: 0 auto;
-  }
-
-  .footer .footer-social__list {
-    margin: 0 auto;
-  }
-
   .footer__copyright {
     text-align: center;
     width: 100%;
+  }
+
+  .modal.active {
+    overflow-y: scroll;
   }
 
   .modal.active .modal__body {
@@ -3350,10 +3384,6 @@ textarea {
 
   .about .text_under {
     width: 100%;
-  }
-
-  .about .section-title {
-    letter-spacing: -1px;
   }
 
   .about .text_under .h3 {
@@ -3421,10 +3451,6 @@ textarea {
     width: 100%;
   }
 
-  .blog-carousel__head .btn-accent {
-    width: 100%;
-  }
-
   .blog-carousel__swiper {
     width: 100%;
     max-width: 100%;
@@ -3454,7 +3480,7 @@ textarea {
 
 @media (max-width: 767px) {
   main {
-    padding-top: 97px;
+    padding-top: 96px;
   }
 
   .container {
@@ -3463,6 +3489,7 @@ textarea {
 
   .section-title {
     font-size: 2rem;
+    letter-spacing: -1px;
   }
 
   .btn-primary,
@@ -3494,7 +3521,7 @@ textarea {
   }
 
   .header .logo {
-    width: 80%;
+    max-width: 96px;
   }
 
   .header .navigation {
@@ -3514,7 +3541,7 @@ textarea {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
-    gap: 4rem 0;
+    gap: 3rem 0;
   }
 
   .header .actions__link {
@@ -3534,11 +3561,7 @@ textarea {
   }
 
   .callback__form fieldset {
-    margin-bottom: 1rem;
-  }
-
-  .callback__notice {
-    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
   .callback .caption {
@@ -3556,7 +3579,6 @@ textarea {
   .modal__body .section-title {
     max-width: 300px;
     font-size: 1.5rem;
-    letter-spacing: -1px;
     margin-bottom: 1rem;
   }
 
@@ -3621,7 +3643,13 @@ textarea {
   }
 
   .reviews-card__bottom {
-    gap: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .reviews-card__info {
+    text-align: center;
   }
 
   .reviews-card__avatar {
@@ -3629,7 +3657,7 @@ textarea {
   }
 
   .reviews-card__counter {
-    margin-right: 0;
+    display: none;
   }
 
   .blog-carousel-card .caption {
@@ -3655,18 +3683,13 @@ textarea {
     max-width: 340px;
   }
 
-  .hero .btn-accent {
-    max-width: 450px;
-    width: 100%;
-  }
-
   .hero-text {
     max-width: 450px;
     width: 100%;
   }
 
   .hero-text__title {
-    font-size: 38px;
+    font-size: 40px;
     letter-spacing: -1.2px;
     margin-bottom: 1.5rem;
     max-width: 100%;
@@ -3674,6 +3697,7 @@ textarea {
 
   .hero-text__subtitle {
     margin-bottom: 1.5rem;
+    line-height: 1.4;
     max-width: 100%;
   }
 
@@ -3766,14 +3790,14 @@ textarea {
        object-position: top center;
   }
 
-  .about .content .btn-accent {
-    width: 100%;
-  }
-
   .about .text_under {
     margin-left: 0;
     width: 100%;
     max-width: 100%;
+  }
+
+  .about .text_under .h3 {
+    letter-spacing: 0;
   }
 
   .services {
@@ -3799,10 +3823,6 @@ textarea {
             justify-content: flex-start;
   }
 
-  .department .section-title {
-    letter-spacing: -1px;
-  }
-
   .department .content {
     width: 100%;
   }
@@ -3824,9 +3844,8 @@ textarea {
     margin: 0 1rem;
   }
 
-  .reviews .carousel-navigation__button {
-    width: 3rem;
-    height: 3rem;
+  .reviews .carousel-navigation {
+    display: none;
   }
 
   .blog-carousel {

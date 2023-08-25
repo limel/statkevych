@@ -9,17 +9,19 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230822161127"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230825080808"
 		rel="stylesheet"
 	/>
-	<script src="js/app.min.js?_v=20230822161127" defer></script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230822161127" />
+	<script src="js/app.min.js?_v=20230825080808" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230825080808" />
 </head>
 
 	<body>
 		<header class="header">
 	<div class="container header__container">
-		<a href="/" class="logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture></a>
+		<a href="/" class="logo">
+			<svg><use href="img/sprite.svg#logo" /></svg>
+		</a>
 		<nav class="navigation">
 			<button class="menu-toggle">
 				<span></span>
@@ -55,6 +57,11 @@
 						<svg><use href="img/sprite.svg#instagram" /></svg>
 					</a>
 				</li>
+				<li class="actions__item mobile-only">
+					<a href="/" title="instagram" class="actions__link" aria-label="link">
+						<svg><use href="img/sprite.svg#facebook" /></svg>
+					</a>
+				</li>
 				<li class="actions__item">
 					<a href="/" title="instagram" class="actions__link" aria-label="link">
 						<svg><use href="img/sprite.svg#telegram" /></svg>
@@ -66,7 +73,7 @@
 						title="Безкоштовна консультація"
 						aria-label="Безкоштовна консультація"
 					>
-						Безкоштовна консультація
+						Записатися на консультацію
 					</button>
 				</li>
 			</menu>
@@ -289,7 +296,10 @@
 			<h2 class="services-card__title">
 				Протези верхніх кінцівок
 				<span class="services-card__title-icon">
-					<svg
+					<svg width="25" height="25">
+						<use href="img/sprite.svg#arrow" />
+					</svg>
+					<!-- <svg
 						width="25"
 						height="25"
 						viewBox="0 0 25 25"
@@ -301,7 +311,7 @@
 							stroke="#1C253A"
 							stroke-width="2"
 						/>
-					</svg>
+					</svg> -->
 				</span>
 			</h2>
 			<p class="services-card__text">
@@ -324,7 +334,10 @@
 			<h2 class="services-card__title">
 				Протези верхніх кінцівок
 				<span class="services-card__title-icon">
-					<svg
+					<svg width="25" height="25">
+						<use href="img/sprite.svg#arrow" />
+					</svg>
+					<!-- <svg
 						width="25"
 						height="25"
 						viewBox="0 0 25 25"
@@ -336,7 +349,7 @@
 							stroke="#1C253A"
 							stroke-width="2"
 						/>
-					</svg>
+					</svg> -->
 				</span>
 			</h2>
 			<p class="services-card__text">
@@ -359,7 +372,10 @@
 			<h2 class="services-card__title">
 				Протези верхніх кінцівок
 				<span class="services-card__title-icon">
-					<svg
+					<svg width="25" height="25">
+						<use href="img/sprite.svg#arrow" />
+					</svg>
+					<!-- <svg
 						width="25"
 						height="25"
 						viewBox="0 0 25 25"
@@ -371,7 +387,7 @@
 							stroke="#1C253A"
 							stroke-width="2"
 						/>
-					</svg>
+					</svg> -->
 				</span>
 			</h2>
 			<p class="services-card__text">
@@ -414,52 +430,66 @@
 		</div>
 		<div class="image-grid">
 			<div class="image-grid__columns">
-				<img
-					loading="lazy"
-					src="img/department/image1.jpg"
-					srcset="img/department/image1@2x.jpg 2x"
-					alt="img"
-				/>
-				<img
-					loading="lazy"
-					src="img/department/image2.jpg"
-					srcset="img/department/image2@2x.jpg 2x"
-					alt="img"
-				/>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image1.jpg"
+						srcset="img/department/image1@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image2.jpg"
+						srcset="img/department/image2@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
 			</div>
 			<div class="image-grid__columns">
-				<img
-					loading="lazy"
-					src="img/department/image3.jpg"
-					srcset="img/department/image3@2x.jpg 2x"
-					alt="img"
-				/>
-				<img
-					loading="lazy"
-					src="img/department/image4.jpg"
-					srcset="img/department/image4@2x.jpg 2x"
-					alt="img"
-				/>
-				<img
-					loading="lazy"
-					src="img/department/image5.jpg"
-					srcset="img/department/image5@2x.jpg 2x"
-					alt="img"
-				/>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image3.jpg"
+						srcset="img/department/image3@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image4.jpg"
+						srcset="img/department/image4@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image5.jpg"
+						srcset="img/department/image5@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
 			</div>
 			<div class="image-grid__columns">
-				<img
-					loading="lazy"
-					src="img/department/image6.jpg"
-					srcset="img/department/image6@2x.jpg 2x"
-					alt="img"
-				/>
-				<img
-					loading="lazy"
-					src="img/department/image7.jpg"
-					srcset="img/department/image7@2x.jpg 2x"
-					alt="img"
-				/>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image6.jpg"
+						srcset="img/department/image6@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="img/department/image7.jpg"
+						srcset="img/department/image7@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -898,7 +928,11 @@
 		<footer class="footer">
 	<div class="container">
 		<div class="footer__head">
-			<picture><source srcset="img/logo-footer.webp" type="image/webp"><img src="img/logo-footer.png" alt="logo" class="footer__logo" /></picture>
+			<div class="footer__logo">
+				<svg>
+					<use href="img/sprite.svg#logo" />
+				</svg>
+			</div>
 			<span class="footer__copyright">
 				©Copyright 2023, All Rights Reserved.
 			</span>
@@ -948,18 +982,11 @@
 				<li class="footer-social__item">
 					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
-							<use href="img/sprite.svg#twitter" />
-						</svg>
-					</a>
-				</li>
-				<li class="footer-social__item footer-social__item_small">
-					<a href="" class="footer-social__link" aria-label="link">
-						<svg>
 							<use href="img/sprite.svg#instagram" />
 						</svg>
 					</a>
 				</li>
-				<li class="footer-social__item footer-social__item_small">
+				<li class="footer-social__item">
 					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="img/sprite.svg#facebook" />
