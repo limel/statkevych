@@ -1,6 +1,5 @@
 import * as baseFunctions from './modules/functions.js';
 import * as carousels from './modules/carousels.js';
-import Rellax from 'rellax';
 
 document.addEventListener('DOMContentLoaded', () => {
 	initPage();
@@ -10,23 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', () => {
-	baseFunctions.handleHeroImgPosition();
+	baseFunctions.handlerHeroImgPosition();
+	baseFunctions.fixedHeader();
+	baseFunctions.handlerBackgroundSize();
+	baseFunctions.handlerFooter();
 });
 
-// function 
+window.addEventListener('scroll', () => {
+	baseFunctions.fixedHeader();
+});
 
+// function
 
 function initPage() {
 	baseFunctions.isWebp();
 	baseFunctions.handlerButtonClick();
-	baseFunctions.handleHeroImgPosition();
-	window.addEventListener('scroll', baseFunctions.fixedHeader);
+	baseFunctions.handlerHeroImgPosition();
+	baseFunctions.handlerAnchorLink();
+	baseFunctions.parallax();
+	baseFunctions.handlerModal();
+	baseFunctions.handlerMenu();
+	baseFunctions.handlerBackgroundSize();
+	baseFunctions.fixedHeader();
+	baseFunctions.handlerFooter();
 }
-// const rellax = new Rellax('.parallax-layer', {
-// 	speed: 2,
-// 	center: false,
-// 	wrapper: null,
-// 	round: true,
-// 	vertical: true,
-// 	horizontal: true,
-// });

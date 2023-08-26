@@ -40,3 +40,18 @@
     /* 133.333% */
   }
 }
+
+@include _mobile {
+  .input {
+    margin-bottom: 1rem;
+
+    &__input {
+      padding: 1rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    &__label {
+      font-size: 0.875rem;
+    }
+  }
+}

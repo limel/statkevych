@@ -1,7 +1,6 @@
 <section id="about" class="about">
 	<div class="container">
 		<span class="caption">Про мене</span>
-
 		<div class="content">
 			<div class="text">
 				<h2 class="section-title">
@@ -14,20 +13,23 @@
 						лікуй розумом, а не ліками. Такого правила дотримуюсь з кожним
 						пацієнтом, якого доводилось чи доведеться лікувати.
 					</p>
-					<button class="btn-accent btn-icon">
+					<button class="btn-accent btn-icon modal-open" data-modal="callback" title="Записатися на прийом"
+						aria-label="Записатися на прийом">
 						Записатися на прийом
 						<span class="icon">
-							<svg><use href="@img/sprite.svg#arrow" /></svg>
+							<svg>
+								<use href="@img/sprite.svg#arrow" />
+							</svg>
 						</span>
 					</button>
 				</div>
 			</div>
 			<div class="image image-parallax">
-				<img src="@img/about/image.jpg" srcset="@img/about/image@2x.jpg 2x" class="sticky__image" alt="img" />
-				<!-- <div class="parallax-layer" data-rellax-speed="7"></div> -->
+				<img src="@img/about/image.jpg" srcset="@img/about/image@2x.jpg 2x" alt="img" loading="lazy" />
+				<div class="parallax"></div>
 			</div>
 		</div>
-		<div class="text right">
+		<div class="text text_under">
 			<h3 class="h3">
 				Виключно індивідуальний підхід та дбайливе ставлення до пацієнтів.
 			</h3>

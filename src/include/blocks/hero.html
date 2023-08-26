@@ -2,12 +2,16 @@
 	<div class="container">
 		<span class="caption">Мої послуги</span>
 		<div class="hero-text">
-			<h1>Кваліфікована ортопедична допомога.</h1>
-			<p>
-				Кваліфікована ортопедична допомога для дітей та дорослих. Сучасне
-				обладнання. Без вихідних.
+			<h1 class="hero-text__title">Кваліфікована ортопедична допомога.</h1>
+			<p class="hero-text__subtitle">
+				Захворювання опорно-рухового апарату не потрібно ігнорувати. Рух є
+				однією з невід’ємних складових, що робить наше життя повноцінним.
 			</p>
-			<button class="btn-accent btn-icon">
+			<button
+				class="btn-accent btn-icon modal-open"
+				title="Записатися на прийом"
+				aria-label="Записатися на прийом"
+			>
 				Записатися на прийом
 				<span class="icon">
 					<svg><use href="@img/sprite.svg#arrow" /></svg>
@@ -15,5 +19,11 @@
 			</button>
 		</div>
 	</div>
-	<img class="img hero__img" id="heroImg" src="@img/hero.png" srcset="@img/hero@2x.png 2x" alt="img" />
+	<img
+		class="img hero__img"
+		id="heroImg"
+		src="@img/hero.png"
+		srcset="@img/hero@2x.png 2x"
+		alt="img"
+	/>
 </section>

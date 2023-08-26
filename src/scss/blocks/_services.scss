@@ -20,3 +20,15 @@
     margin-bottom: 16rem;
   }
 }
+
+@include _tablet {
+  .services {
+    margin-bottom: 4.25rem;
+  }
+}
+
+@include _mobile {
+  .services {
+    margin-bottom: 3rem;
+  }
+}

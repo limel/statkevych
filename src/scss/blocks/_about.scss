@@ -1,11 +1,18 @@
 .about {
   margin-bottom: 5.5rem;
 
-  .text.right {
+  .text .sticky {
+    max-width: 533px;
+  }
+
+  .text_under {
     margin-left: auto;
+    width: 40.625%;
 
     .h3 {
       margin-bottom: 1rem;
+      margin-top: 2.5rem;
+      letter-spacing: -3px;
     }
 
     p {
@@ -13,30 +20,17 @@
     }
   }
 
-  .text.right,
-  .sticky {
-    max-width: 533px;
-  }
-
   .section-title {
     max-width: 725px;
     margin-bottom: 2.5rem;
+    letter-spacing: -3px;
+
   }
 
   .image {
     position: relative;
     margin-top: 9.25rem;
-  }
-
-  .parallax-layer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #000;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: $transition translate;
+    width: 40.625%;
   }
 
   .content {
@@ -50,6 +44,87 @@
 
       p {
         margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+@include _desktop-small {
+  .about {
+    .section-title {
+      max-width: 525px;
+    }
+  }
+}
+
+@include _tablet {
+  .about {
+    margin-bottom: 4.25rem;
+
+    .text_under {
+      width: 100%;
+    }
+
+    .text_under {
+      .h3 {
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+@include _mobile {
+  .about {
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .sticky {
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        margin-bottom: 3rem;
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .image {
+        width: 100%;
+        width: fit-content;
+        margin: 0 auto;
+
+        img {
+          max-height: 480px;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+    }
+
+    .text_under {
+      margin-left: 0;
+      width: 100%;
+      max-width: 100%;
+
+      .h3 {
+        letter-spacing: 0;
       }
     }
   }

@@ -4,37 +4,35 @@
 		<div class="reviews__head">
 			<h2 class="section-title">Що говорять мої пацієнти.</h2>
 			<div role="group" class="carousel-navigation">
-				<button
-					class="carousel-navigation__button reviews-prev-button"
-					role="button"
-				>
-					<svg
-						width="13"
-						height="14"
-						viewBox="0 0 13 14"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						class="carousel-navigation__icon"
-					>
+				<button class="carousel-navigation__button reviews-prev-button" role="button" title="попередній слайд"
+					aria-label="попередній слайд">
+					<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="carousel-navigation__icon">
 						<path d="M13 7L1 7M1 7L7 13M1 7L7 1" stroke="currentColor" />
 					</svg>
 				</button>
-				<button
-					class="carousel-navigation__button reviews-next-button"
-					role="button"
-				>
-					<svg
-						width="13"
-						height="14"
-						viewBox="0 0 13 14"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						class="carousel-navigation__icon"
-					>
+				<button class="carousel-navigation__button reviews-next-button" role="button" title="наступний слайд"
+					aria-label="наступний слайд">
+					<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="carousel-navigation__icon">
 						<path d="M0 7H12M12 7L6 1M12 7L6 13" stroke="currentColor" />
 					</svg>
 				</button>
 			</div>
+		</div>
+		<div class="reviews__actions">
+			<button class="btn-accent btn-icon modal-open" data-modal="review" title="Додати відгук"
+				aria-label="Додати відгук">
+				Додати відгук
+				<span class="icon">
+					<svg>
+						<use href="@img/sprite.svg#arrow" />
+					</svg>
+				</span>
+			</button>
+			<a href="/" class="btn-secondary">
+				Дивитися всі
+			</a>
 		</div>
 	</div>
 	<div class="swiper reviews-swiper reviews__swiper">
@@ -44,6 +42,7 @@
 			@@include('../cards/reviews-card.html')
 			@@include('../cards/reviews-card.html')
 		</ul>
+		<div class="reviews-swiper__pagination swiper-pagination"></div>
 	</div>
 	<img src="@img/logo-bg.png" alt="img" class="reviews__bg-image" />
 </section>

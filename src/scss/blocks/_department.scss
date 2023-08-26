@@ -32,8 +32,43 @@
     flex-direction: column;
     color: $text-color-light;
 
-    button {
+    .btn-accent {
       margin-top: 3rem;
+    }
+  }
+}
+
+@include _tablet {
+  .department {
+    padding: 4.5rem 0;
+    margin-bottom: 4.5rem;
+
+    .container {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .content {
+      width: 60%;
+    }
+  }
+}
+
+@include _mobile {
+  .department {
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .content {
+      width: 100%;
     }
   }
 }

@@ -115,3 +115,55 @@
     // }
   }
 }
+
+
+@include _tablet {
+  .contacts {
+    padding-bottom: 3rem;
+    margin-bottom: 4.25rem;
+
+    .section-title {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .contacts-info {
+    flex-direction: column;
+
+    &__description {
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@include _mobile {
+  .contacts {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+
+    .caption {
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .contacts-info {
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .schedule {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+
+      &__item {
+        font-size: 1rem;
+      }
+    }
+  }
+}

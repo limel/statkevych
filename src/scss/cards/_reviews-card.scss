@@ -68,4 +68,40 @@
 
 
 
-.swiper-counter {}
+@include _mobile {
+  .reviews-card {
+    padding: 1rem;
+    min-height: auto;
+    gap: 1.5rem;
+
+    &__top {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      .text {
+        p {
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
+
+    &__bottom {
+      justify-content: center;
+    }
+
+    &__info {
+      text-align: center;
+    }
+
+    &__avatar {
+      margin-right: 0;
+    }
+
+    &__counter {
+      display: none;
+    }
+  }
+}

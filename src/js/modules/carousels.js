@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar, Pagination } from 'swiper/modules';
 import { handlerChangeSlides, updateNavigationButtons } from './functions.js';
 
 export function initServicesSwiper() {
@@ -10,6 +10,17 @@ export function initServicesSwiper() {
 		// Optional parameters
 		slidesPerView: 2,
 		spaceBetween: 32,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 1,
+			},
+			1100: {
+				slidesPerView: 2,
+			},
+		},
 		on: {
 			init: function () {
 				updateNavigationButtons(this, servicesPrev, servicesNext);
@@ -33,6 +44,34 @@ export function initReviewsSwiper() {
 		spaceBetween: 24,
 		slidesOffsetBefore: marginLeft + 64,
 		slidesOffsetAfter: marginLeft + 64,
+		modules: [Pagination],
+		pagination: {
+			el: '.reviews-swiper__pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				slidesOffsetBefore: 0,
+				slidesOffsetAfter: 0,
+				spaceBetween: 16,
+			},
+			768: {
+				slidesPerView: 1.2,
+				slidesOffsetBefore: 32,
+				slidesOffsetAfter: 32,
+			},
+			1024: {
+				slidesPerView: 1.3,
+				slidesOffsetBefore: marginLeft + 32,
+				slidesOffsetAfter: marginLeft + 32,
+			},
+			1200: {
+				slidesOffsetBefore: marginLeft + 64,
+				slidesOffsetAfter: marginLeft + 64,
+				slidesPerView: 1.8,
+			},
+		},
 		on: {
 			init: function () {
 				updateNavigationButtons(this, reviewsPrev, reviewsNext);
@@ -58,6 +97,20 @@ export function initBlogSwiper() {
 		slidesPerView: 2,
 		spaceBetween: 64,
 		modules: [Scrollbar],
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 16,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 32,
+			},
+			1200: {
+				slidesPerView: 2,
+				spaceBetween: 64,
+			},
+		},
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			draggable: true,

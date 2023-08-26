@@ -12,6 +12,10 @@
 
   &__description {
     padding: 2rem 1.5rem 3.5rem;
+
+    .caption {
+      text-transform: uppercase;
+    }
   }
 
   &__title {
@@ -27,9 +31,26 @@
     -webkit-line-clamp: 3;
     /* number of lines to show */
     -webkit-box-orient: vertical;
-
   }
 }
 
+@include _tablet {
+  .blog-carousel-card {
+    &__description {
+      padding: 1rem 1rem 2rem 1rem;
+    }
+  }
+}
 
-.caption {}
+@include _mobile {
+  .blog-carousel-card {
+
+    .caption {
+      font-size: 0.875rem;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

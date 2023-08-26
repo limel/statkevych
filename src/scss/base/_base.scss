@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
 
-  @include _desktop-small {
-    font-size: 15px;
-  }
+  // @include _desktop-small {
+  //   font-size: 15px;
+  // }
 }
 
 *,
@@ -25,7 +25,34 @@ body {
     'Helvetica Neue', sans-serif;
   background-color: $background-color;
   color: $text-color;
+  -ms-overflow-style: none;
+  /* Hide the default scrollbar */
 
+  &.no-scroll {
+    overflow: hidden;
+    padding-right: 8px;
+
+    .header {
+      padding-right: 8px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: lighten($color: $accent-color, $amount: 10%);
+    cursor: pointer;
+  }
 }
 
 main {
@@ -51,7 +78,6 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0 4rem;
-
 }
 
 a,
@@ -76,6 +102,10 @@ p {
   line-height: 1.64;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .caption {
   color: inherit;
   font-family: Montserrat;
@@ -91,7 +121,7 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 1.12px;
+  letter-spacing: -3px;
 }
 
 .h3 {
@@ -123,5 +153,86 @@ p {
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+}
+
+.image-parallax {
+  position: relative;
+}
+
+.parallax {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: $text-color;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translate(0, 0);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@include _desktop-small {
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@include _tablet {
+  body.no-scroll {
+    padding-right: 0;
+
+    .header {
+      padding-right: 0;
+    }
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+
+  .text {
+    p {
+      line-height: 1.4;
+    }
+  }
+
+  .h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@include _mobile {
+  main {
+    padding-top: 96px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    letter-spacing: -1px;
   }
 }

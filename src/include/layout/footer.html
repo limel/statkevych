@@ -1,7 +1,11 @@
 <footer class="footer">
 	<div class="container">
 		<div class="footer__head">
-			<img src="@img/logo-footer.png" alt="logo" class="footer__logo" />
+			<div class="footer__logo">
+				<svg>
+					<use href="@img/sprite.svg#logo" />
+				</svg>
+			</div>
 			<span class="footer__copyright">
 				©Copyright 2023, All Rights Reserved.
 			</span>
@@ -10,16 +14,18 @@
 			<h3 class="footer-menu__title">Розділи</h3>
 			<ul class="footer-menu__list">
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Послуги</a>
+					<a href="" class="footer-menu__link" aria-label="link">Послуги</a>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Про мене</a>
+					<a href="" class="footer-menu__link" aria-label="link">Про мене</a>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Види протезів</a>
+					<a href="" class="footer-menu__link" aria-label="link">
+						Види протезів
+					</a>
 				</li>
 				<li class="footer-menu__item">
-					<a href="" class="footer-menu__link">Блог</a>
+					<a href="" class="footer-menu__link" aria-label="link">Блог</a>
 				</li>
 			</ul>
 		</nav>
@@ -27,13 +33,19 @@
 			<h3 class="footer-contacts__title">Контакти</h3>
 			<ul class="footer-contacts__list">
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link">+099 55 226 09 32</a>
+					<a href="" class="footer-contacts__link" aria-label="link">
+						+099 55 226 09 32
+					</a>
 				</li>
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link">statkevich@gmail.com</a>
+					<a href="" class="footer-contacts__link" aria-label="link">
+						statkevich@gmail.com
+					</a>
 				</li>
 				<li class="footer-contacts__item">
-					<a href="" class="footer-contacts__link">Дружби Народів 26</a>
+					<a href="" class="footer-contacts__link" aria-label="link">
+						Дружби Народів 26
+					</a>
 				</li>
 			</ul>
 		</nav>
@@ -41,28 +53,21 @@
 			<h3 class="footer-social__title">Соціальні мережі</h3>
 			<ul class="footer-social__list">
 				<li class="footer-social__item">
-					<a href="" class="footer-social__link">
-						<svg>
-							<use href="@img/sprite.svg#twitter" />
-						</svg>
-					</a>
-				</li>
-				<li class="footer-social__item footer-social__item_small">
-					<a href="" class="footer-social__link">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="@img/sprite.svg#instagram" />
 						</svg>
 					</a>
 				</li>
-				<li class="footer-social__item footer-social__item_small">
-					<a href="" class="footer-social__link">
+				<li class="footer-social__item">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="@img/sprite.svg#facebook" />
 						</svg>
 					</a>
 				</li>
 				<li class="footer-social__item">
-					<a href="" class="footer-social__link">
+					<a href="" class="footer-social__link" aria-label="link">
 						<svg>
 							<use href="@img/sprite.svg#telegram" />
 						</svg>
@@ -72,5 +77,3 @@
 		</div>
 	</div>
 </footer>
-
-<script src="js/app.min.js"></script>

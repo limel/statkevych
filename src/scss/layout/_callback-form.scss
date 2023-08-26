@@ -1,4 +1,5 @@
 .callback {
+  margin-bottom: 6rem;
 
   .container {
     display: flex;
@@ -14,7 +15,6 @@
   &__description {
     max-width: 644px;
     width: 100%;
-
   }
 
   &__form fieldset,
@@ -27,9 +27,6 @@
   }
 
   &__form fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
     margin-bottom: 3.5rem;
   }
 
@@ -43,21 +40,57 @@
     /* 187.5% */
   }
 
-  &__img {
-    margin-bottom: 9rem;
+  // &__img {
+  //   margin-bottom: 9rem;
+  // }
+}
+
+@include _desktop-small {
+  .callback {
+    .container {
+      align-items: center;
+    }
   }
 }
 
-.container {}
+@include _tablet {
+  .callback {
+    margin-bottom: 4.25rem;
+
+    &__notice {
+      line-height: 1.4;
+      margin-top: 1rem;
+    }
+
+    .container {
+      gap: 2rem;
+    }
+  }
+}
+
+@include _mobile {
+  .callback {
+    margin-bottom: 3rem;
+
+    &__form {
+      margin: 0 auto;
+
+      & fieldset {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__notice {}
 
 
 
-.section-title {}
+    .caption {
+      margin-bottom: 1rem;
 
+    }
 
-
-.btn-accent {}
-
-.btn-icon {}
-
-.icon {}
+    &__img {
+      display: none;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <section class="callback">
 	<div class="container">
 		<div class="callback__description">
-			<span class="caption"> Контактна форма </span>
 			<form action="" class="callback__form">
+				<span class="caption"> Контактна форма </span>
 				<fieldset>
 					<legend class="section-title">Зв'яжіться зі мною.</legend>
 					<label class="input">
@@ -17,11 +17,25 @@
 							placeholder="+380 (___) ___ ___ ___"
 						/>
 					</label>
+					<label class="input">
+						<span class="input__label"> Опишіть, що вас турбує </span>
+						<textarea
+							name="message"
+							rows="4"
+							class="input__input"
+							placeholder="Причина звернення..."
+						></textarea>
+					</label>
 					<span class="callback__notice">
 						Заповніть форму і лікар зв'яжеться з вами впродовж однієї години.
 					</span>
 				</fieldset>
-				<button type="submit" class="btn-accent btn-icon">
+				<button
+					type="submit"
+					class="btn-accent btn-icon"
+					title="Надіслати"
+					aria-label="Надіслати"
+				>
 					Надіслати
 					<span class="icon">
 						<svg><use href="@img/sprite.svg#arrow" /></svg>
@@ -29,6 +43,14 @@
 				</button>
 			</form>
 		</div>
-		<img src="@img/callback-form.jpg" srcset="@img/callback-form@2x.jpg 2x"  alt="img" class="callback__img" />
+		<div class="image-parallax callback__img">
+			<img
+				loading="lazy"
+				src="@img/callback-form.jpg"
+				srcset="@img/callback-form@2x.jpg 2x"
+				alt="img"
+			/>
+			<div class="parallax"></div>
+		</div>
 	</div>
 </section>

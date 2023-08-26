@@ -44,6 +44,7 @@
 	},
 	"homepage": "https://github.com/limel/statkevych",
 	"dependencies": {
+		"gsap": "^3.12.2",
 		"rellax": "^1.12.1",
 		"swiper": "^10.1.0"
 	}

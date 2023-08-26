@@ -1,5 +1,5 @@
 .header {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   width: 100%;
   top: 0;
@@ -9,154 +9,174 @@
   border-bottom: 1px solid $border-color;
   transition:
     $transition box-shadow,
-    $transition padding,
+    $transition padding-top,
+    $transition padding-bottom,
+    $transition padding-left,
     $transition transform;
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    container: header/inline-size;
   }
 
   .logo {
+    max-width: 124px;
+    width: 100%;
+    height: 68px;
     margin-right: 95px;
-    min-width: 128px;
+    min-width: 9.8cqi; //128px;
     transition:
       $transition min-width,
       $transition height;
-  }
-}
-
-.navigation {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navigation-list {
-  gap: 0 64px;
-
-  &__link {
-    position: relative;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #1e1e1e;
-    padding-bottom: 8px;
-    transition: $transition font-size;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      background-color: $accent-color;
-      width: 0;
-      transition: $transition width;
-    }
-
-    &:focus {
-      outline: none;
-
-      &:after {
-        width: 100%;
-      }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      &:hover:after {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.navigation-list,
-.navigation-actions {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-
-.actions {
-  &__item {
-    margin-right: 16px;
-
-    &:nth-child(2) {
-      margin-right: 24px;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
-    @extend .btn-primary;
-    text-decoration: none;
-    color: $text-color;
-    padding: 13px;
 
     svg {
-      width: 1.25rem;
-      height: 1.25rem;
+      width: 100%;
+      height: 100%;
       color: $text-color;
-      transform: scale(1);
-      transition:
-        $transition color,
-        $transition transform,
-        $transition width,
-        $transition height;
     }
+  }
 
-    &:focus {
-      outline: none;
+  .navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-      svg {
-        color: $accent-color;
-        transform: scale(1.2);
+  .navigation-list {
+    gap: 0 4rem;
+
+    &__link {
+      position: relative;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #1e1e1e;
+      padding-bottom: 8px;
+      transition: $transition font-size;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background-color: $accent-color;
+        width: 0;
+        transition: $transition width;
       }
-    }
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover svg {
-        color: $accent-color;
-        transform: scale(1.2);
+      &:focus {
+        outline: none;
+
+        &:after {
+          width: 100%;
+        }
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:after {
+          width: 100%;
+        }
       }
     }
   }
 
-  &__button {
-    @extend.btn-primary;
-    padding: 15px 24px;
+  .navigation-list,
+  .navigation-actions {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  .actions {
+    &__item {
+      margin-right: 16px;
+
+      &:nth-child(2) {
+        margin-right: 24px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      @extend .btn-primary;
+      text-decoration: none;
+      color: $text-color;
+      padding: 13px;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: $text-color;
+        transform: scale(1);
+        transition:
+          $transition color,
+          $transition transform,
+          $transition width,
+          $transition height;
+      }
+
+      &:focus {
+        outline: none;
+
+        svg {
+          color: $accent-color;
+          transform: scale(1.2);
+        }
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover svg {
+          color: $accent-color;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &__button {
+      @extend.btn-primary;
+      padding: 15px 24px;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
   }
 }
 
 .header.fixed {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
 
-  .navigation-list {
-    &__link {
+  &:not(.active) {
+    padding: 0.5rem 0;
+    box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
+
+    .navigation-list {
+      &__link {
+        font-size: 0.875rem;
+      }
+    }
+
+    .actions__link {
+      padding: 11px;
+    }
+
+    .actions__link svg {
+      width: 1rem;
+      height: 1rem
+    }
+
+    .actions__button {
+      padding: 11px 24px;
       font-size: 0.875rem;
     }
-  }
-
-  .actions__link {
-    padding: 11px;
-  }
-
-  .actions__link svg {
-    width: 1rem;
-    height: 1rem
-  }
-
-  .actions__button {
-    padding: 11px 24px;
-    font-size: 0.875rem;
   }
 
   .logo {
@@ -164,6 +184,182 @@
   }
 }
 
-.header.hide {
+.header.hide:not(.active) {
   transform: translateY(-100%);
+}
+
+.header.active~.header-overlay {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 37, 58, 0.32);
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: $transition opacity;
+}
+
+@media (max-width: 1280px) {
+  .navigation-list {
+    gap: 0 2rem;
+  }
+}
+
+@include _desktop-small {
+  .header {
+    .logo {
+      margin-right: 45px;
+    }
+
+    .navigation-list {
+      gap: 0 2rem;
+
+      &__link {
+        font-size: 0.9375rem;
+      }
+    }
+
+    .actions__item:nth-child(2) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@include _tablet {
+  .header.fixed .navigation {
+    top: -8px;
+
+    .menu-toggle {
+      top: 22px;
+    }
+
+  }
+
+  .header.active .navigation {
+    pointer-events: inherit;
+    opacity: 1;
+  }
+
+  .header {
+    .container {
+      justify-content: space-between;
+    }
+
+    .navigation {
+      padding: 9rem 1rem 1rem 1rem;
+      position: fixed;
+      top: -16px;
+      right: 0;
+      flex-direction: column;
+      max-width: 400px;
+      width: 100%;
+      background-color: fade-out($color: $background-color, $amount: 0.3);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      pointer-events: none;
+      height: 100dvh;
+      box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
+      transition: $transition opacity;
+
+      .menu-toggle {
+        position: absolute;
+        top: 30px;
+        right: 1rem;
+
+        span:nth-child(1) {
+          rotate: 45deg;
+          transform: translate(10px, 10px);
+          position: relative;
+          top: -9px;
+        }
+
+        span:nth-child(2) {
+          rotate: -45deg;
+          position: relative;
+          top: -9px;
+        }
+      }
+    }
+
+    .navigation-actions {
+      flex-wrap: wrap;
+    }
+
+    .actions {
+      &__button {
+        font-size: 0.875rem;
+        padding: 12px 18px;
+      }
+    }
+
+    .navigation-list {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 1rem 0;
+
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      max-width: 24px;
+      height: 16px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: transparent;
+      box-sizing: content-box;
+
+      span {
+        background-color: $text-color;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include _mobile {
+  .header {
+    padding: 1rem 0;
+
+    .logo {
+      max-width: 96px;
+    }
+
+    .navigation {
+      max-width: 100%;
+      width: 100%;
+      align-items: flex-start;
+
+      .navigation-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 3rem 0;
+      }
+    }
+
+    .actions__link {
+      padding: 1rem;
+    }
+
+    .actions__button {
+      display: none;
+    }
+  }
 }

@@ -4,7 +4,7 @@
   padding: 7.5rem 0;
   margin-bottom: 7.5rem;
 
-  & .container {
+  .container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -23,8 +23,9 @@
 
   &__swiper {
     max-width: 800px;
+    width: 100%;
     margin-right: 0;
-    padding-bottom: 96px;
+    padding-bottom: 6rem;
   }
 
   .swiper-scrollbar {
@@ -42,5 +43,58 @@
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
+  }
+}
+
+@include _desktop-small {
+  .blog-carousel {
+    .container {
+      gap: 1.5rem;
+    }
+  }
+}
+
+@include _tablet {
+  .blog-carousel {
+    padding: 3rem 0;
+    margin-bottom: 4.25rem;
+
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+
+    &__head {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__swiper {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@include _mobile {
+  .blog-carousel {
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+
+    .container {
+      gap: 3rem;
+    }
+
+    &__head {
+      gap: 1.5rem;
+    }
+
+    &__swiper {
+      max-width: 400px;
+      margin: 0 auto;
+      padding-bottom: 5rem;
+    }
   }
 }

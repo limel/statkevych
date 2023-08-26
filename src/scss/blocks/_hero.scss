@@ -11,7 +11,7 @@
     align-items: flex-start;
   }
 
-  & .caption {
+  .caption {
     min-width: 12.5rem;
     max-width: 12.5rem;
     width: 100%;
@@ -19,7 +19,7 @@
     margin-top: 2rem;
   }
 
-  & .img {
+  .img {
     position: absolute;
     width: 33.2cqi; //478px;
     max-width: 478px;
@@ -34,23 +34,82 @@
 }
 
 .hero-text {
-  h1 {
-    font-size: 80px;
+  &__title {
+    font-size: clamp(2cqi, 5.6cqi, 80px);
     font-style: normal;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -1.6px;
-    max-width: 755px;
+    max-width: clamp(30cqi, 52.5cqi, 750px);
+    width: 100%;
     margin-bottom: 48px;
     margin-top: 0;
   }
 
-  p {
-    font-size: 18px;
+  &__subtitle {
+    font-size: clamp(1rem, 1cqi, 1.25cqi);
     font-style: normal;
     font-weight: 500;
     line-height: 1.7;
-    max-width: 530px;
+    max-width: 450px;
     margin-bottom: 48px;
+  }
+}
+
+@include _desktop-small {
+  .hero {
+    .container {
+      flex-direction: column;
+      padding: 48px 2rem 62px;
+    }
+  }
+}
+
+@include _tablet {
+  .hero {
+    .container {
+      padding-bottom: 4.25rem;
+    }
+
+    .caption {
+      margin-top: 0;
+    }
+  }
+}
+
+@include _mobile {
+  .hero {
+    .container {
+      padding: 3rem 1rem;
+    }
+
+    .caption {
+      display: none;
+    }
+
+    .img {
+      position: static;
+      width: 70%;
+      margin: 0 auto;
+      max-width: 340px;
+    }
+  }
+
+  .hero-text {
+    max-width: 450px;
+    width: 100%;
+
+    &__title {
+      font-size: 40px;
+      letter-spacing: -1.2px;
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      max-width: 100%;
+    }
   }
 }

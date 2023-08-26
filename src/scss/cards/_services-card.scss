@@ -42,6 +42,7 @@
     justify-content: space-between;
     margin-top: 0;
     margin-bottom: 1rem;
+    letter-spacing: -3px;
   }
 
   &__title-icon {
@@ -68,6 +69,40 @@
       &__title-icon {
         opacity: 1;
       }
+    }
+  }
+}
+
+@include _tablet {
+  .services-card {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__img {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      max-width: 500px;
+      width: 100%;
+
+      aspect-ratio: 16/9;
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      padding-bottom: 3rem;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+      justify-content: flex-start;
+    }
+
+    &__title-icon {
+      margin-left: 1rem;
+      opacity: 1;
     }
   }
 }

@@ -19,8 +19,7 @@
     margin-right: 1.5rem;
   }
 
-  &::after {
-    content: '';
+  &__background {
     width: 93.20%;
     height: 100%;
     background-color: $background-color-dark;
@@ -32,14 +31,42 @@
   }
 
   &__swiper {
-    max-width: 978px;
+    margin-right: 111px;
     margin-left: 0;
-    margin-right: auto;
   }
 
   & .carousel-navigation {
     position: absolute;
     bottom: 0;
     left: 4rem;
+  }
+}
+
+
+@include _tablet {
+  .services-carousel {
+    margin-bottom: 4.25rem;
+  }
+}
+
+@include _mobile {
+  .services-carousel {
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+
+    &__swiper {
+      width: 100%;
+    }
+
+    & .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      // justify-content: center;
+    }
+
+    & .carousel-navigation {
+      position: static;
+    }
   }
 }

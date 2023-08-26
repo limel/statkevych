@@ -4,7 +4,7 @@
 			<span class="caption">Де мене знайти</span>
 			<h2 class="section-title">
 				<span class="section-title__icon">
-					<img src="@img/logo-small.png" alt="logo" />
+					<img src="@img/logo-small.png" alt="logo" loading="lazy" />
 				</span>
 				Київський ортопедичний центр ендопротезування.
 			</h2>
@@ -14,8 +14,11 @@
 				інтенсивність операцій, удосконалюється техніка їх проведення.
 				Запроваджуються нові методики та розвивається матеріальна база.
 			</p>
-
-			<button class="btn-accent btn-icon btn-accent_dark">
+			<button
+				class="btn-accent btn-icon btn-accent_dark"
+				title="Докладніше про центр"
+				aria-label="Докладніше про центр"
+			>
 				Докладніше про центр
 				<span class="icon">
 					<svg><use href="@img/sprite.svg#arrow" /></svg>
@@ -24,17 +27,66 @@
 		</div>
 		<div class="image-grid">
 			<div class="image-grid__columns">
-				<img src="@img/department/image1.jpg" srcset="@img/department/image1@2x.jpg 2x" alt="img" />
-				<img src="@img/department/image2.jpg"  srcset="@img/department/image2@2x.jpg 2x"alt="img" />
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image1.jpg"
+						srcset="@img/department/image1@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image2.jpg"
+						srcset="@img/department/image2@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
 			</div>
 			<div class="image-grid__columns">
-				<img src="@img/department/image3.jpg"  srcset="@img/department/image3@2x.jpg 2x" alt="img" />
-				<img src="@img/department/image4.jpg"  srcset="@img/department/image4@2x.jpg 2x" alt="img" />
-				<img src="@img/department/image5.jpg"  srcset="@img/department/image5@2x.jpg 2x" alt="img" />
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image3.jpg"
+						srcset="@img/department/image3@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image4.jpg"
+						srcset="@img/department/image4@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image5.jpg"
+						srcset="@img/department/image5@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
 			</div>
 			<div class="image-grid__columns">
-				<img src="@img/department/image6.jpg"  srcset="@img/department/image6@2x.jpg 2x" alt="img" />
-				<img src="@img/department/image7.jpg"  srcset="@img/department/image7@2x.jpg 2x" alt="img" />
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image6.jpg"
+						srcset="@img/department/image6@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
+				<div class="image-grid__item">
+					<img
+						loading="lazy"
+						src="@img/department/image7.jpg"
+						srcset="@img/department/image7@2x.jpg 2x"
+						alt="img"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
