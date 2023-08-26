@@ -1454,7 +1454,8 @@ textarea {
 .btn-primary,
 .header .actions__button,
 .header .actions__link,
-.btn-accent {
+.btn-accent,
+.btn-secondary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1485,7 +1486,8 @@ textarea {
 .btn-primary .ripple,
 .header .actions__button .ripple,
 .header .actions__link .ripple,
-.btn-accent .ripple {
+.btn-accent .ripple,
+.btn-secondary .ripple {
   position: absolute;
   border-radius: 50%;
   -webkit-transform: scale(0);
@@ -1515,11 +1517,18 @@ textarea {
 .btn-primary:focus:not(.actions__link),
 .header .actions__button:focus:not(.actions__link),
 .header .actions__link:focus:not(.actions__link),
-.btn-accent:focus:not(.actions__link) {
+.btn-accent:focus:not(.actions__link),
+.btn-secondary:focus:not(.actions__link) {
   background-color: #CDB06D;
   color: #fff;
   border-color: transparent;
   outline: none;
+}
+
+.btn-secondary {
+  padding: 1.1875rem 1.5rem;
+  border: 1px solid transparent;
+  background-color: #fff;
 }
 
 .btn-accent {
@@ -1572,6 +1581,9 @@ textarea {
   width: 1rem;
   height: 1rem;
   color: #fff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   -webkit-transition: 0.3s ease-in-out transform;
   transition: 0.3s ease-in-out transform;
 }
@@ -2172,6 +2184,7 @@ textarea {
   padding: 3.5rem 3.5rem 3rem 3.5rem;
   border-radius: 20px;
   background: #FFF;
+  position: absolute;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: 0.3s ease-in-out transform, 0.3s ease-in-out opacity;
@@ -2222,7 +2235,7 @@ textarea {
   pointer-events: inherit;
 }
 
-.modal.active .modal__body {
+.modal .modal__body.active {
   pointer-events: inherit;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -2793,7 +2806,7 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .reviews__head .section-title {
@@ -2827,6 +2840,24 @@ textarea {
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+.reviews .reviews-swiper__pagination {
+  display: none;
+}
+
+.reviews__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .blog-carousel {
@@ -3073,6 +3104,92 @@ textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-star;
+      -ms-flex-align: flex-star;
+          align-items: flex-star;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #1C253A;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 11rem;
+}
+
+.partners .container {
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+}
+
+.partners .section-title {
+  margin-bottom: 4.5rem;
+}
+
+.partners p {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.64;
+  color: #8794B2;
+}
+
+.partners p strong {
+  color: #fff;
+}
+
+.partners__img {
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.partners__img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #CDB06D;
+}
+
+.partners__img img {
+  width: 100%;
+}
+
+.partners .partners-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem 5.875rem;
+  max-width: 714px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.partners .partners-list__item {
+  max-width: 310px;
+  width: 100%;
+}
+
+.partners .partners-list__item img {
+  margin: 0 auto;
 }
 
 @media (max-width: 1280px) {
@@ -3430,6 +3547,11 @@ textarea {
     margin-bottom: 3rem;
   }
 
+  .reviews__actions {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .blog-carousel {
     padding: 3rem 0;
     margin-bottom: 4.25rem;
@@ -3476,6 +3598,23 @@ textarea {
     max-width: 100%;
     margin-bottom: 3rem;
   }
+
+  .partners {
+    margin-bottom: 3rem;
+  }
+
+  .partners .container {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .partners .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .partners__img {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3495,6 +3634,7 @@ textarea {
   .btn-primary,
   .header .actions__button,
   .header .actions__link,
+  .btn-secondary,
   .btn-accent {
     padding: 1rem 1.5rem;
   }
@@ -3574,6 +3714,7 @@ textarea {
 
   .modal__body {
     padding: 1.5rem 1rem;
+    width: 95%;
   }
 
   .modal__body .section-title {
@@ -3842,6 +3983,27 @@ textarea {
 
   .reviews .reviews-swiper {
     margin: 0 1rem;
+    padding-bottom: 3rem;
+    position: relative;
+  }
+
+  .reviews .reviews-swiper__pagination {
+    display: block;
+    z-index: 2;
+    top: auto;
+    bottom: 0rem;
+  }
+
+  .reviews .reviews-swiper__pagination .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    background-color: #47516A;
+    -webkit-transition: 0.3s ease-in-out background-color;
+    transition: 0.3s ease-in-out background-color;
+  }
+
+  .reviews .reviews-swiper__pagination .swiper-pagination-bullet-active {
+    background-color: #CDB06D;
   }
 
   .reviews .carousel-navigation {
@@ -3899,7 +4061,8 @@ textarea {
   .btn-primary:hover:not(.actions__link, .btn-accent),
   .header .actions__button:hover:not(.actions__link, .btn-accent),
   .header .actions__link:hover:not(.actions__link, .btn-accent),
-  .btn-accent:hover:not(.actions__link, .btn-accent) {
+  .btn-accent:hover:not(.actions__link, .btn-accent),
+  .btn-secondary:hover:not(.actions__link, .btn-accent) {
     background-color: #CDB06D;
     color: #fff;
     border-color: transparent;
@@ -3911,9 +4074,9 @@ textarea {
   }
 
   .btn-icon:hover:not(.actions__link) .icon svg {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 
   .btn-modal:hover:not(.actions__link) svg {

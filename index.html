@@ -9,18 +9,20 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230825080808"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&_v=20230826131152"
 		rel="stylesheet"
 	/>
-	<script src="js/app.min.js?_v=20230825080808" defer></script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230825080808" />
+	<script src="js/app.min.js?_v=20230826131152" defer></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230826131152" />
 </head>
 
 	<body>
 		<header class="header">
 	<div class="container header__container">
 		<a href="/" class="logo">
-			<svg><use href="img/sprite.svg#logo" /></svg>
+			<svg>
+				<use href="img/sprite.svg#logo" />
+			</svg>
 		</a>
 		<nav class="navigation">
 			<button class="menu-toggle">
@@ -29,11 +31,7 @@
 			</button>
 			<ul class="navigation-list">
 				<li class="navigation-list__item">
-					<a
-						href="/statkevych/services.html"
-						class="navigation-list__link"
-						aria-label="link"
-					>
+					<a href="/statkevych/services.html" class="navigation-list__link" aria-label="link">
 						Послуги
 					</a>
 				</li>
@@ -54,25 +52,28 @@
 			<menu class="navigation-actions">
 				<li class="actions__item">
 					<a href="/" title="instagram" class="actions__link" aria-label="link">
-						<svg><use href="img/sprite.svg#instagram" /></svg>
+						<svg>
+							<use href="img/sprite.svg#instagram" />
+						</svg>
 					</a>
 				</li>
 				<li class="actions__item mobile-only">
 					<a href="/" title="instagram" class="actions__link" aria-label="link">
-						<svg><use href="img/sprite.svg#facebook" /></svg>
+						<svg>
+							<use href="img/sprite.svg#facebook" />
+						</svg>
 					</a>
 				</li>
 				<li class="actions__item">
 					<a href="/" title="instagram" class="actions__link" aria-label="link">
-						<svg><use href="img/sprite.svg#telegram" /></svg>
+						<svg>
+							<use href="img/sprite.svg#telegram" />
+						</svg>
 					</a>
 				</li>
 				<li class="actions__item">
-					<button
-						class="actions__button modal-open"
-						title="Безкоштовна консультація"
-						aria-label="Безкоштовна консультація"
-					>
+					<button class="actions__button modal-open" data-modal="callback" title="Безкоштовна консультація"
+						aria-label="Безкоштовна консультація">
 						Записатися на консультацію
 					</button>
 				</li>
@@ -86,7 +87,6 @@
 	</div>
 </header>
 <div class="header-overlay"></div>
-
 		<main>
 			<section class="hero">
 	<div class="container">
@@ -244,25 +244,19 @@
 						лікуй розумом, а не ліками. Такого правила дотримуюсь з кожним
 						пацієнтом, якого доводилось чи доведеться лікувати.
 					</p>
-					<button
-						class="btn-accent btn-icon modal-open"
-						title="Записатися на прийом"
-						aria-label="Записатися на прийом"
-					>
+					<button class="btn-accent btn-icon modal-open" data-modal="callback" title="Записатися на прийом"
+						aria-label="Записатися на прийом">
 						Записатися на прийом
 						<span class="icon">
-							<svg><use href="img/sprite.svg#arrow" /></svg>
+							<svg>
+								<use href="img/sprite.svg#arrow" />
+							</svg>
 						</span>
 					</button>
 				</div>
 			</div>
 			<div class="image image-parallax">
-				<img
-					src="img/about/image.jpg"
-					srcset="img/about/image@2x.jpg 2x"
-					alt="img"
-					loading="lazy"
-				/>
+				<picture><source srcset="img/about/image.webp, img/about/image@2x.webp 2x" type="image/webp"><img src="img/about/image.jpg" srcset="img/about/image@2x.jpg 2x" alt="img" loading="lazy" /></picture>
 				<div class="parallax"></div>
 			</div>
 		</div>
@@ -278,7 +272,39 @@
 		</div>
 	</div>
 </section>
-
+			<section class="partners">
+	<div class="container">
+		<h2 class="section-title">Мої партнери, які <br /> мені довіряють.</h2>
+		<ul class="partners-list">
+			<li class="partners-list__item">
+				<picture><source srcset="img/partners/item1.webp" type="image/webp"><img src="img/partners/item1.png" srcsest="img/partners/item1@2x.png" alt="img" /></picture>
+				<p>
+					<strong>Osseointegration International</strong> <br />є провідним постачальником технологій
+					остеоінтеграції в усьому світі. Тісно співпрацює з австралійською
+					командою професіоналів з остеоінтеграції.
+				</p>
+			</li>
+			<li class="partners-list__item">
+				<picture><source srcset="img/partners/item2.webp" type="image/webp"><img src="img/partners/item2.png" srcsest="img/partners/item2@2x.png" alt="img" /></picture>
+				<p>
+					<strong>United Orthopedic</strong> надає інноваційні, економічно ефективні способи створення вдосконалених
+					і передових ортопедичних
+					хірургічних рішень.
+				</p>
+			</li>
+			<li class="partners-list__item">
+				<picture><source srcset="img/partners/item3.webp" type="image/webp"><img src="img/partners/item3.png" srcsest="img/partners/item3@2x.png" alt="img" /></picture>
+				<p>
+					<strong>Permedica Orthopaedics </strong> <br />
+					виробляє та продає технологічні ортопедичні протези для всіх типів пацієнтів з усього світу.
+				</p>
+			</li>
+		</ul>
+	</div>
+	<div class="partners__img">
+		<picture><source srcset="img/partners/background-img.webp, img/partners/background-img@2x.webp 2x" type="image/webp"><img src="img/partners/background-img.jpg" srcset="img/partners/background-img@2x.jpg 2x" alt="img" /></picture>
+	</div>
+</section>
 			<section class="services" id="services">
 	<div class="container">
 		<span class="caption">Види протезів</span>
@@ -501,41 +527,35 @@
 		<div class="reviews__head">
 			<h2 class="section-title">Що говорять мої пацієнти.</h2>
 			<div role="group" class="carousel-navigation">
-				<button
-					class="carousel-navigation__button reviews-prev-button"
-					role="button"
-					title="попередній слайд"
-					aria-label="попередній слайд"
-				>
-					<svg
-						width="13"
-						height="14"
-						viewBox="0 0 13 14"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						class="carousel-navigation__icon"
-					>
+				<button class="carousel-navigation__button reviews-prev-button" role="button" title="попередній слайд"
+					aria-label="попередній слайд">
+					<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="carousel-navigation__icon">
 						<path d="M13 7L1 7M1 7L7 13M1 7L7 1" stroke="currentColor" />
 					</svg>
 				</button>
-				<button
-					class="carousel-navigation__button reviews-next-button"
-					role="button"
-					title="наступний слайд"
-					aria-label="наступний слайд"
-				>
-					<svg
-						width="13"
-						height="14"
-						viewBox="0 0 13 14"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						class="carousel-navigation__icon"
-					>
+				<button class="carousel-navigation__button reviews-next-button" role="button" title="наступний слайд"
+					aria-label="наступний слайд">
+					<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="carousel-navigation__icon">
 						<path d="M0 7H12M12 7L6 1M12 7L6 13" stroke="currentColor" />
 					</svg>
 				</button>
 			</div>
+		</div>
+		<div class="reviews__actions">
+			<button class="btn-accent btn-icon modal-open" data-modal="review" title="Додати відгук"
+				aria-label="Додати відгук">
+				Додати відгук
+				<span class="icon">
+					<svg>
+						<use href="img/sprite.svg#arrow" />
+					</svg>
+				</span>
+			</button>
+			<a href="/" class="btn-secondary">
+				Дивитися всі
+			</a>
 		</div>
 	</div>
 	<div class="swiper reviews-swiper reviews__swiper">
@@ -641,10 +661,10 @@
 </li>
 
 		</ul>
+		<div class="reviews-swiper__pagination swiper-pagination"></div>
 	</div>
 	<picture><source srcset="img/logo-bg.webp" type="image/webp"><img src="img/logo-bg.png" alt="img" class="reviews__bg-image" /></picture>
 </section>
-
 			<section class="blog-carousel" id="blog">
 	<div class="container">
 		<div class="blog-carousel__head">
@@ -1007,22 +1027,12 @@
 
 		<div class="modal">
 	<div class="modal__overlay modal-close"></div>
-	<form action="" class="modal__body">
-		<button
-			class="btn-modal modal-close"
-			title="закрти модальне вікно"
-			aria-label="закрти модальне вікно"
-		>
-			<svg
-				width="14"
-				height="14"
-				viewBox="0 0 14 14"
-				xmlns="http://www.w3.org/2000/svg"
-			>
+	<form action="" class="modal__body" id="callback">
+		<button class="btn-modal modal-close" title="закрти модальне вікно" aria-label="закрти модальне вікно">
+			<svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M7.00023 5.58672L11.9502 0.636719L13.3642 2.05072L8.41423 7.00072L13.3642 11.9507L11.9502 13.3647L7.00023 8.41472L2.05023 13.3647L0.63623 11.9507L5.58623 7.00072L0.63623 2.05072L2.05023 0.636719L7.00023 5.58672Z"
-					fill="currentColor"
-				/>
+					fill="currentColor" />
 			</svg>
 		</button>
 		<fieldset>
@@ -1033,38 +1043,58 @@
 			</label>
 			<label class="input">
 				<span class="input__label">Ваш номер телефону</span>
-				<input
-					type="tel"
-					class="input__input"
-					placeholder="+380 (___) ___ ___ ___"
-				/>
+				<input type="tel" class="input__input" placeholder="+380 (___) ___ ___ ___" />
 			</label>
 			<label class="input">
 				<span class="input__label"> Опишіть, що вас турбує </span>
-				<textarea
-					name="message"
-					rows="4"
-					class="input__input"
-					placeholder="Причина звернення..."
-				></textarea>
+				<textarea name="message" rows="4" class="input__input" placeholder="Причина звернення..."></textarea>
 			</label>
 			<span class="callback__notice">
 				Заповніть форму і лікар зв'яжеться з вами впродовж однієї години.
 			</span>
 		</fieldset>
-		<button
-			type="submit"
-			class="btn-accent btn-icon"
-			title="Надіслати"
-			aria-label="Надіслати"
-		>
+		<button type="submit" class="btn-accent btn-icon" title="Надіслати" aria-label="Надіслати">
 			Надіслати
 			<span class="icon">
-				<svg><use href="img/sprite.svg#arrow" /></svg>
+				<svg>
+					<use href="img/sprite.svg#arrow" />
+				</svg>
+			</span>
+		</button>
+	</form>
+
+	<form action="" class="modal__body" id="review">
+		<button class="btn-modal modal-close" title="закрти модальне вікно" aria-label="закрти модальне вікно">
+			<svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M7.00023 5.58672L11.9502 0.636719L13.3642 2.05072L8.41423 7.00072L13.3642 11.9507L11.9502 13.3647L7.00023 8.41472L2.05023 13.3647L0.63623 11.9507L5.58623 7.00072L0.63623 2.05072L2.05023 0.636719L7.00023 5.58672Z"
+					fill="currentColor" />
+			</svg>
+		</button>
+		<fieldset>
+			<legend class="section-title">Написати відгук</legend>
+			<label class="input">
+				<span class="input__label">Ваше ім'я та прізвище</span>
+				<input type="text" class="input__input" placeholder="Ваше ім'я" />
+			</label>
+			<label class="input">
+				<span class="input__label">Ваш номер телефону</span>
+				<input type="tel" class="input__input" placeholder="+380 (___) ___ ___ ___" />
+			</label>
+			<label class="input">
+				<span class="input__label"> Ваш коментар </span>
+				<textarea name="message" rows="4" class="input__input" placeholder="Причина звернення..."></textarea>
+			</label>
+		</fieldset>
+		<button type="submit" class="btn-accent btn-icon" title="Надіслати" aria-label="Надіслати">
+			Надіслати
+			<span class="icon">
+				<svg>
+					<use href="img/sprite.svg#arrow" />
+				</svg>
 			</span>
 		</button>
 	</form>
 </div>
-
 	</body>
 </html>
