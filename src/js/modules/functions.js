@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 
-let prevScroll = 0;
+let prevScroll = 180;
 
 export function isWebp() {
 	function testWebP(callback) {
@@ -83,7 +83,7 @@ export function fixedHeader() {
 
 export function handlerButtonClick() {
 	const buttons = document.querySelectorAll(
-		'button:not(.carousel-navigation__button, .modal-close, .menu-toggle)'
+		'button:not(.carousel-navigation__button, .modal-close, .menu-toggle, .to-top)'
 	);
 
 	for (const button of buttons) {
@@ -196,9 +196,15 @@ export function handlerMenu() {
 	const buttonToggle = document.querySelectorAll('.menu-toggle');
 	const overaly = document.querySelector('.header-overlay');
 	const header = document.querySelector('.header');
+	const navigationList = header.querySelector('.navigation-list');
 	const body = document.querySelector('body');
 
 	if (!buttonToggle) return;
+
+	navigationList.addEventListener('click', () => {
+		header.classList.remove('active');
+		body.classList.remove('no-scroll');
+	});
 
 	overaly.addEventListener('click', () => {
 		header.classList.remove('active');
@@ -232,6 +238,26 @@ export function handlerBackgroundSize() {
 	}
 
 	handleResize();
+}
+
+export function toTop() {
+	const toTopButton = document.querySelector('.to-top');
+	if (!toTopButton) return;
+
+	window.scrollY > 1000
+		? toTopButton.classList.add('active')
+		: toTopButton.classList.remove('active');
+}
+
+export function handlerToTopClick() {
+	const toTopButton = document.querySelector('.to-top');
+	if (!toTopButton) return;
+	toTopButton.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	});
 }
 
 export function handlerFooter() {

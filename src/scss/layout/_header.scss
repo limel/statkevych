@@ -262,12 +262,24 @@
       max-width: 400px;
       width: 100%;
       background-color: fade-out($color: $background-color, $amount: 0.3);
-      backdrop-filter: blur(10px);
       opacity: 0;
       pointer-events: none;
       height: 100dvh;
-      box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
+      // box-shadow: 0 0 7px 5px rgba(147, 147, 147, 0.1);
       transition: $transition opacity;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(10px);
+        z-index: -1;
+        opacity: 1;
+        transition: $transition opacity;
+      }
 
       .menu-toggle {
         position: absolute;
@@ -295,6 +307,7 @@
 
     .actions {
       &__button {
+        margin-top: 1rem;
         font-size: 0.875rem;
         padding: 12px 18px;
       }

@@ -17,6 +17,7 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
 	baseFunctions.fixedHeader();
+	baseFunctions.toTop();
 });
 
 // function
@@ -30,6 +31,6 @@ function initPage() {
 	baseFunctions.handlerModal();
 	baseFunctions.handlerMenu();
 	baseFunctions.handlerBackgroundSize();
-	baseFunctions.fixedHeader();
 	baseFunctions.handlerFooter();
+	baseFunctions.handlerToTopClick();
 }

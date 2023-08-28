@@ -45,6 +45,60 @@
       position: sticky;
       top: 90px;
       flex: 1;
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+
+@include _tablet {
+  .services-hero {
+    margin-top: 3rem;
+    margin-bottom: 4.25rem;
+
+    &__head {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 2.5rem;
+
+      .caption {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__img {
+      height: 400px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__content {
+      margin: 0;
+      flex-direction: column;
+
+      .sticky {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@include _mobile {
+  .services-hero {
+    margin-bottom: 3rem;
+
+    &__title {
+      font-size: 2.5rem;
     }
   }
 }

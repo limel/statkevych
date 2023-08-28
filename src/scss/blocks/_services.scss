@@ -25,9 +25,21 @@
   .services {
     margin-bottom: 4.25rem;
   }
+
+  #services-page {
+    .services {
+      margin-bottom: 4.25rem;
+    }
+  }
 }
 
 @include _mobile {
+  #services-page {
+    .services {
+      margin-bottom: 3rem;
+    }
+  }
+
   .services {
     margin-bottom: 3rem;
   }

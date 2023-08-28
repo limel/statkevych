@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./include/layout/head.html',{ "title":"reviews-page" })
+
+<body>
+	@@include('./include/layout/header.html')
+
+	<main id="reviews-page">
+		<section class="page-head">
+			<div class="container">
+				<span class="caption">Блог</span>
+				<div class="page-head__content">
+					<h1 class="page-head__title">
+						Мої публікації
+						в блозі.
+					</h1>
+					<p class="page-head__text">
+						Поєднання досвіду та професіоналізму є запорукою забезпечення якості моєї роботи.
+						Моя мета – реабілітувати кожного пацієнта, який до мене звертається.
+					</p>
+				</div>
+			</div>
+		</section>
+		@@include('./include/blocks/all-blog.html')
+		@@include('./include/blocks/contacts.html')
+		@@include('./include/layout/callback-form.html')
+	</main>
+	@@include('./include/layout/footer.html')
+	@@include('./include/layout/modal.html')
+</body>
+
+</html>

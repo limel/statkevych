@@ -1,0 +1,76 @@
+.page-head {
+  container: page-head/inline-size;
+
+  .caption {
+    max-width: 145px;
+    width: 100%;
+    margin-right: 4.875rem;
+    margin-top: 2.25rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 72px 4rem 123px;
+  }
+
+  &__title {
+    font-size: clamp(2cqi, 5.6cqi, 80px);
+    max-width: 755px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    font-size: clamp(1rem, 1cqi, 1.25cqi);
+    line-height: 1.7;
+    max-width: 450px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .btn-accent {
+    margin-top: 3rem;
+  }
+}
+
+@include _desktop-small {
+  .page-head {
+    .container {
+      flex-direction: column;
+      padding: 48px 2rem 62px;
+    }
+
+    .caption {
+      margin-top: 0;
+    }
+  }
+}
+
+@include _mobile {
+  .page-head {
+    .container {
+      padding: 3rem 1rem;
+    }
+
+    .caption {
+      display: none;
+    }
+
+    &__title {
+      font-size: 40px;
+      letter-spacing: -1.2px;
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+    }
+
+    &__text {
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      max-width: 100%;
+    }
+
+  }
+}

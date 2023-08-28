@@ -1,0 +1,77 @@
+.blog-card {
+  background-color: #fff;
+  color: $text-color;
+  max-width: 365px;
+  box-sizing: content-box;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $background-color-dark;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: $transition transform;
+  }
+
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  &__description {
+    padding: 2rem 1.5rem 3.5rem;
+
+    .caption {
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-decoration-line: underline;
+    //ellipses text
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::after {
+        transform: translate(16px, 16px);
+      }
+    }
+  }
+}
+
+@include _tablet {
+  .blog-card {
+    &__description {
+      padding: 1rem 1rem 2rem 1rem;
+    }
+  }
+}
+
+@include _mobile {
+  .blog-card {
+    .caption {
+      font-size: 0.875rem;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

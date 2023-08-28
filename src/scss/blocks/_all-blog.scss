@@ -1,0 +1,60 @@
+.all-blog {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 6rem;
+
+  &__recent,
+  &__archive {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .caption {
+      min-width: 116px;
+      margin-right: 107px;
+    }
+  }
+
+  &__recent {
+    margin-bottom: 6rem;
+  }
+
+  &__archive {
+    margin-bottom: 7.5rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 6rem 8.5rem;
+  }
+}
+
+@include _tablet {
+  .all-blog {
+    margin-bottom: 4rem;
+
+    .caption {
+      margin-bottom: 1.5rem;
+    }
+
+    &__recent,
+    &__archive {
+      flex-direction: column;
+    }
+
+    &__recent {
+      margin-bottom: 4rem;
+    }
+
+    &__archive {
+      margin-bottom: 4rem;
+    }
+
+    &__list {
+      gap: 1.5rem;
+    }
+  }
+}

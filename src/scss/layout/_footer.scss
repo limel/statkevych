@@ -109,8 +109,32 @@
       }
     }
   }
+
 }
 
+
+.to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: $transition opacity;
+}
+
+.to-top.active {
+  opacity: 1;
+  pointer-events: inherit;
+}
 
 @include _tablet {
   .footer {
@@ -136,5 +160,15 @@
       text-align: center;
       width: 100%;
     }
+  }
+}
+
+
+@include _mobile {
+  .to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
