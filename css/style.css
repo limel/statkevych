@@ -3223,7 +3223,7 @@ textarea {
 }
 
 .partners__img {
-  max-width: 600px;
+  max-width: 598px;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -3301,6 +3301,7 @@ textarea {
   width: 100%;
   margin-top: 0;
   margin-bottom: 2.5rem;
+  font-weight: 500;
 }
 
 .page-head__text {
