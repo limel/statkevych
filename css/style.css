@@ -2752,7 +2752,7 @@ textarea {
 .about .section-title {
   max-width: 725px;
   margin-bottom: 2.5rem;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 }
 
 .about .image {
@@ -3146,7 +3146,7 @@ textarea {
   font-size: 5rem;
   font-weight: 500;
   line-height: 1.1;
-  letter-spacing: 1.6px;
+  letter-spacing: -1.6px;
   margin: 0;
 }
 
@@ -4554,17 +4554,17 @@ textarea {
   }
 
   .contacts .section-title {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .contacts-info__title {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .contacts-info .schedule {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 
   .contacts-info .schedule__item {
